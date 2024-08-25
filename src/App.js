@@ -1,12 +1,20 @@
 import "./App.css";
-import Homepage from "./pages/homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/portfolio/homepage";
+import Experience from "./pages/portfolio/experience";
+import About from "./pages/portfolio/about";
+import Header from "./components/portfolio/Header";
 
 function App() {
   return (
-    <div className="container">
-      <h1>Welcome to your Portfolio</h1>
-      <Homepage></Homepage>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/experience" element={<Experience />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
