@@ -1,18 +1,25 @@
+import { SocialIcon } from "react-social-icons";
+
 export default function Header() {
   return (
     <header>
       <div>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/experience">Experience</a>
-          </li>
-        </ul>
+        <SocialIcon
+          url="https://www.instagram.com/alexandrab_design/"
+          bgColor="transparent"
+          fgColor="gray"
+        />
+        <SocialIcon
+          url="https://www.linkedin.com/in/alexandra-b-a8a27b146/"
+          bgColor="transparent"
+          fgColor="gray"
+        />
+        <SocialIcon
+          network="email"
+          bgColor="transparent"
+          fgColor="gray"
+          className="cursor-pointer"
+        />
       </div>
     </header>
   );
