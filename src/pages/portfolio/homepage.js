@@ -1,8 +1,8 @@
 export default function Homepage() {
   return (
     <div>
-      <h1>This is a Homepage</h1>
-      {/* Header */}
+      {/* Header: Done and added above all routes in App.js */}
+
       {/* Hero */}
       {/* About */}
       {/* Experience */}
