@@ -27,9 +27,9 @@ const getHeaderAnimation = (homepage, direction) => {
   if (!homepage) return {}
   const initialX = direction === 'left' ? -500 : 500
   return {
-    initial: { x: initialX, opacity: 0, scale: 0.5 },
+    initial: { x: initialX, opacity: 1, scale: 0.5 },
     animate: { x: 0, opacity: 1, scale: 1 },
-    transition: { duration: 1 },
+    transition: { duration: 0.15 },
   }
 }
 
