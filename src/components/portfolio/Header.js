@@ -17,7 +17,7 @@ export default function Header({ homepage = false }) {
       </DynamicDiv>
       <DynamicDiv {...animationPropsRight} className="flex flex-row items-center cursor-pointer text-gray-300">
         <SocialIcon {...getEmailAttributes} />
-        <p className="uppercase hidden md:inline-flex text-sm text-black">Get In Touch</p>
+        <p className="uppercase hidden md:inline-flex text-sm text-gray-700">Get In Touch</p>
       </DynamicDiv>
     </header>
   )
@@ -37,6 +37,6 @@ const getSocialIconsAttributes = (mainProperty, mainPropertyValue) => {
   return {
     [mainProperty]: mainPropertyValue,
     bgColor: 'transparent',
-    fgColor: 'black',
+    fgColor: '#444444',
   }
 }
