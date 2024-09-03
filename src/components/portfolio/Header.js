@@ -15,9 +15,14 @@ export default function Header({ homepage = false }) {
         <SocialIcon {...getInstagramAttributes} />
         <SocialIcon {...getLinkedInAttributes} />
       </DynamicDiv>
-      <DynamicDiv {...animationPropsRight} className="flex flex-row items-center cursor-pointer text-gray-300">
+      <DynamicDiv {...animationPropsRight} className="flex flex-row items-center cursor-pointer text-white">
         <SocialIcon {...getEmailAttributes} />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Get In Touch</p>
+        <p
+          className="uppercase hidden md:inline-flex text-white"
+          style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '16px', fontWeight: 600, letterSpacing: '.08em' }}
+        >
+          Get In Touch
+        </p>
       </DynamicDiv>
     </header>
   )
@@ -37,6 +42,6 @@ const getSocialIconsAttributes = (mainProperty, mainPropertyValue) => {
   return {
     [mainProperty]: mainPropertyValue,
     bgColor: 'transparent',
-    fgColor: '#9ca3af',
+    fgColor: 'white',
   }
 }
