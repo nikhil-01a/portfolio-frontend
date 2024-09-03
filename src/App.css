@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('./fonts/InterTight-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal; /* You can specify the font weight if it's a specific weight */
+  font-style: normal; /* You can specify the style if it's italic or normal */
+}

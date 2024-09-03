@@ -1,8 +1,8 @@
-import Header from "../../components/portfolio/Header";
+import Header from '../../components/portfolio/Header'
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="bg-[rgb(36,36,36)] text-white h-screen">
       <Header homepage={true} />
       {/* Header: Done and added above all routes in App.js */}
 
@@ -13,5 +13,5 @@ export default function Homepage() {
       {/* Projects */}
       {/* Contact Me*/}
     </div>
-  );
+  )
 }
