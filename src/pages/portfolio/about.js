@@ -1,3 +1,10 @@
+import Header from "../../components/portfolio/Header";
+
 export default function About() {
-  return <div>Hi this is an about page</div>;
+  return (
+    <div>
+      <Header />
+      Hi this is an about page
+    </div>
+  );
 }
