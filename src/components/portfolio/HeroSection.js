@@ -2,7 +2,7 @@ import profilePic from '../../assets/IMG_6768.jpg'
 
 export default function HeroSection() {
   return (
-    <div className="border-b border-neutral-950 pb-4 lg:mb-36">
+    <div>
       <div className="flex flex-wrap mt-24 mr-52 ml-80">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -90,7 +90,7 @@ export default function HeroSection() {
         </div>
         <div className="w-full lg:w-1/2 lg:pb-36 lg:pr-28">
           <div className="flex justify-center">
-            <img src={profilePic} alt="Alexandra Biehle"></img>
+            <img src={profilePic} alt="Alexandra Biehle" className="rounded-3xl"></img>
           </div>
         </div>
       </div>
