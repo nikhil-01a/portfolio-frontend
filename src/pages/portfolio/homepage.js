@@ -3,7 +3,7 @@ import HeroSection from '../../components/portfolio/HeroSection'
 
 export default function Homepage() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen">
+    <div className="bg-[rgb(26,26,26)] text-white ">
       {/* Header: Done and added above all routes in App.js */}
       <Header homepage={true} />
 
