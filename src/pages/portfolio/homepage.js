@@ -3,17 +3,19 @@ import HeroSection from '../../components/portfolio/HeroSection'
 
 export default function Homepage() {
   return (
-    <div className="bg-[rgb(26,26,26)] text-white ">
+    <div className=" text-white ">
       {/* Header: Done and added above all routes in App.js */}
       <Header homepage={true} />
 
-      {/* Hero */}
-      <HeroSection />
-      {/* About */}
-      {/* Experience */}
-      {/* Skills */}
-      {/* Projects */}
-      {/* Contact Me*/}
+      <div className="flex flex-col items-center">
+        {/* Hero */}
+        <HeroSection />
+        {/* About */}
+        {/* Experience */}
+        {/* Skills */}
+        {/* Projects */}
+        {/* Contact Me*/}
+      </div>
     </div>
   )
 }

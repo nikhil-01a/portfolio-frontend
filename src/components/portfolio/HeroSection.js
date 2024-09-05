@@ -1,97 +1,66 @@
 import profilePic from '../../assets/IMG_6768.jpg'
 
+const headingStyle = (fontSize, lineHeight) => ({
+  fontFamily: 'Inter Tight, sans-serif',
+  fontWeight: 600,
+  textTransform: 'uppercase',
+  letterSpacing: '.04em',
+  lineHeight,
+  fontSize,
+})
+
 export default function HeroSection() {
   return (
-    <div>
-      <div className="flex flex-wrap mt-24 mr-52 ml-80">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
-            <h1
-              className="text:6xl mt-9 lg:text-8xl"
-              style={{
-                fontFamily: 'Inter Tight, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '.04em',
-                lineHeight: '50px',
-              }}
-            >
+    <div className="p-96 pt-5">
+      <div className="flex flex-col xl2:flex-row">
+        <div className="flex-1 flex flex-col justify-center pr-5">
+          <div className="flex flex-col items-center">
+            <h1 className="mb-8" style={headingStyle('4rem', '50px')}>
               Alexandra
             </h1>
-            <h1
-              className="text:6xl mt-9 lg:text-8xl"
-              style={{
-                fontFamily: 'Inter Tight, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '.04em',
-                lineHeight: '50px',
-              }}
-            >
+            <h1 className="mb-20" style={headingStyle('4rem', '50px')}>
               Biehle
             </h1>
           </div>
-          <div className=" flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-start">
             <h1
-              className="text:2xl mt-9 lg:text-4xl"
-              style={{
-                fontFamily: 'Inter Tight, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '.04em',
-                lineHeight: '50px',
-              }}
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-4"
+              style={headingStyle('1.5rem', '25px')}
             >
               - Graphic Designer
             </h1>
             <h1
-              className="text:2xl mt-4 lg:text-4xl"
-              style={{
-                fontFamily: 'Inter Tight, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '.04em',
-                lineHeight: '1px',
-              }}
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-20"
+              style={headingStyle('1.5rem', '25px')}
             >
               - Outreach Coordinator
             </h1>
-          </div>
-          <div className="relative flex items-center flex-row justify-between w-3/4">
-            <div className="h-auto relative w-96 break-words ">
-              <p
-                className="text:2xl mt-10 lg:text-2xl"
-                style={{
-                  fontFamily: 'Inter Tight, sans-serif',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '.04em',
-                  lineHeight: '30px',
-                }}
-              >
-                Currently Designing for Marshal Retail Group
-              </p>
-            </div>
-            <div className="h-auto relative w-96 break-words ">
-              <p
-                className="text:2xl mt-10 lg:text-2xl"
-                style={{
-                  fontFamily: 'Inter Tight, sans-serif',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '.04em',
-                  lineHeight: '30px',
-                }}
+            <div className="flex flex-row items-center justify-between w-full">
+              <div>
+                <h1
+                  className="text-base sm:text-base md:text-lg lg:text-xl xl:text-xl"
+                  style={headingStyle('1.25rem', '25px')}
+                >
+                  Currently Designing For
+                </h1>
+                <h1
+                  className="text-base sm:text-base md:text-lg lg:text-xl xl:text-xl"
+                  style={headingStyle('1.25rem', '25px')}
+                >
+                  Marshal Retail Group
+                </h1>
+              </div>
+              <h1
+                className="text-base sm:text-base md:text-lg lg:text-xl xl:text-xl"
+                style={headingStyle('1.25rem', '25px')}
               >
                 (2023 - PRESENT)
-              </p>
+              </h1>
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:pb-36 lg:pr-28">
-          <div className="flex justify-center">
-            <img src={profilePic} alt="Alexandra Biehle" className="rounded-3xl"></img>
-          </div>
+        <div className="flex-1 pt-5 lg:pl-5">
+          <img src={profilePic} alt="Alexandra Biehle" className="rounded-3xl" />
         </div>
       </div>
     </div>
