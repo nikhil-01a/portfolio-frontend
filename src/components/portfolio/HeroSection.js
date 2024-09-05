@@ -12,7 +12,7 @@ const headingStyle = (fontSize, lineHeight) => ({
 export default function HeroSection() {
   return (
     <div className="p-96 pt-5">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col xl2:flex-row">
         <div className="flex-1 flex flex-col justify-center pr-5">
           <div className="flex flex-col items-center">
             <h1 className="mb-8" style={headingStyle('4rem', '50px')}>
