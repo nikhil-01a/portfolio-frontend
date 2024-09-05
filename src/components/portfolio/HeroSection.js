@@ -13,7 +13,7 @@ export default function HeroSection() {
   return (
     <div className="p-96 pt-5">
       <div className="flex flex-col xl2:flex-row">
-        <div className="flex-1 flex flex-col justify-center pr-5">
+        <div className="flex-1 flex flex-col justify-center xl2:pr-5">
           <div className="flex flex-col items-center">
             <h1 className="mb-8" style={headingStyle('4rem', '50px')}>
               Alexandra
@@ -59,7 +59,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="flex-1 pt-5 lg:pl-5">
+        <div className="flex-1 pt-5 xl2:pl-5">
           <img src={profilePic} alt="Alexandra Biehle" className="rounded-3xl" />
         </div>
       </div>
