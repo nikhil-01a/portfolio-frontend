@@ -7,8 +7,8 @@ export default function HeroSection() {
       <div className="flex flex-col 2xl:flex-row">
         <div className="flex-1 flex flex-col justify-center xl2:pr-5">
           <div className="flex flex-col items-center">
-            <h1 className="hero-text mt-8 mb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[2rem]">Alexandra</h1>
-            <h1 className="hero-text mb-12 xs:mb-16 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[2rem]">Biehle</h1>
+            <h1 className="hero-text mt-4 mb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">Alexandra</h1>
+            <h1 className="hero-text mb-12 xs:mb-16 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">Biehle</h1>
           </div>
           <div className="flex flex-col items-start xs:items-center">
             <div>
@@ -19,9 +19,9 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex flex-col items-start">
-            <div className="flex flex-row mb-4 items-end justify-between w-full">
+            <div className="flex flex-row mb-4 items-center justify-between w-full custom-spacing">
               <div>
-                <h1 className="hero-text text-xs xs:text-lg">Currently Designing For:</h1>
+                <h1 className="hero-text text-xs xs:text-lg">Currently Designing At</h1>
                 <h1 className="hero-text text-xs xs:text-lg">Marshal Retail Group</h1>
               </div>
               <h1 className="hero-text text-xs xs:text-lg 2xl:mr-5">(2023 - PRESENT)</h1>
