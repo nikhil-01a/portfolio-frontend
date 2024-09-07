@@ -12,7 +12,7 @@ export default function HeroSection() {
           </div>
           <div className="flex flex-col items-start xs:items-center">
             <div>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start custom-spacing">
                 <h1 className="hero-text text-base xs:text-xl lg:text-2xl">- Graphic Designer</h1>
                 <h1 className="hero-text mb-8 text-base xs:text-xl lg:text-2xl xs:mb-16">- Outreach Coordinator</h1>
               </div>
