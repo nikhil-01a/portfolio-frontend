@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xl2: '1640px',
+        xs: '500px', // Use this
+        sm: '640px',
+        md: '768px',
+        lg: '1024px', //Use this
+        xl: '1280px',
+        '2xl': '1630px', // Default
       },
     },
   },

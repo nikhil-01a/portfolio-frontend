@@ -1,5 +1,5 @@
 import Header from '../../components/portfolio/Header'
-import HeroSection from '../../components/portfolio/HeroSection'
+import HeroSection from '../../components/portfolio/HeroSection/HeroSection'
 
 export default function Homepage() {
   return (
