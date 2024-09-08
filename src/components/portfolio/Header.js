@@ -10,7 +10,7 @@ export default function Header({ homepage = false }) {
   const getEmailAttributes = getSocialIconsAttributes('network', 'email')
 
   return (
-    <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto p-8 z-20 xl:items-center">
+    <header className="sticky top-0 flex items-start justify-between max-w-full overflow-x-hidden mx-auto p-8 z-20 xl:items-center">
       <DynamicDiv {...animationPropsLeft} className="flex flex-row items-center">
         <SocialIcon {...getInstagramAttributes} />
         <SocialIcon {...getLinkedInAttributes} />
@@ -34,7 +34,7 @@ const getHeaderAnimation = (homepage, direction) => {
   return {
     initial: { x: initialX, opacity: 1, scale: 0.5 },
     animate: { x: 0, opacity: 1, scale: 1 },
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
   }
 }
 
