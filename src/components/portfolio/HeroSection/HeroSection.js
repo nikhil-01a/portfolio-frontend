@@ -20,12 +20,12 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex flex-col items-start">
-            <div className="flex flex-row mb-8 items-center justify-between w-full custom-spacing">
+            <div className="flex flex-row mb-6 items-center justify-between w-full custom-spacing">
               <div>
-                <h1 className="hero-text text-xs xs:text-lg">{AnimatedText('Currently Designing At', 0.03)}</h1>
-                <h1 className="hero-text text-xs xs:text-lg">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+                <h1 className="hero-text text-xs text-[0.6rem] xs:text-lg">{AnimatedText('Currently Designing At', 0.03)}</h1>
+                <h1 className="hero-text text-xs text-[0.6rem] xs:text-lg">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
               </div>
-              <h1 className="hero-text text-xs xs:text-lg">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
+              <h1 className="hero-text text-xs text-[0.6rem] xs:text-lg">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
             </div>
           </div>
         </div>
