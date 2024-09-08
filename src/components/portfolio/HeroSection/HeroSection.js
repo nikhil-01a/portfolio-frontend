@@ -10,7 +10,7 @@ export default function HeroSection() {
             <h1 className="hero-text mt-4 mb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">Alexandra</h1>
             <h1 className="hero-text mb-12 xs:mb-16 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">Biehle</h1>
           </div>
-          <div className="flex flex-col items-start xs:items-center">
+          <div className="flex flex-col items-start 2xl:items-start xs:ml-12 xl:ml-10">
             <div>
               <div className="flex flex-col items-start custom-spacing">
                 <h1 className="hero-text text-base xs:text-xl lg:text-2xl">- Graphic Designer</h1>
