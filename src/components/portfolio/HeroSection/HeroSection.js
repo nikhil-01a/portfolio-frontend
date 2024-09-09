@@ -29,7 +29,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="flex-1 pt-5 xl2:pl-5">
+        <div className="flex-1 pt-5 p-10 xs:p-28 xs:pt-5 2xl:p-0 xl2:pl-5">
           <motion.img
             className="rounded-3xl"
             initial={{ opacity: 0, x: 0, y: 50 }}
