@@ -1,4 +1,4 @@
-import Header from "../../components/portfolio/Header";
+import Header from '../../components/portfolio/Header/Header'
 
 export default function Experience() {
   return (
@@ -6,5 +6,5 @@ export default function Experience() {
       <Header />
       <h1>This is an Experience Page</h1>
     </div>
-  );
+  )
 }
