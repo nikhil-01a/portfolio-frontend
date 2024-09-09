@@ -34,7 +34,7 @@ export default function HeroSection() {
             className="rounded-3xl"
             initial={{ opacity: 0, x: 0, y: 50 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             src={profilePic}
             alt="Alexandra Biehle"
           />
