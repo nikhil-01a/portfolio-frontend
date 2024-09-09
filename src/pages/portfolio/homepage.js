@@ -12,8 +12,8 @@ export default function Homepage() {
         <HeroSection />
         {/* About */}
         {/* Experience */}
-        {/* Skills */}
         {/* Projects */}
+        {/* Skills */}
         {/* Contact Me*/}
       </div>
     </div>
