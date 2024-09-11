@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="ml-8 mr-8 sm:ml-20 sm:mr-20 md:ml-40 md:mr-40 lg:ml-60 lg:mr-60 xl:ml-96 xl:mr-96 2xl:ml-60">
       <div className="flex flex-col 2xl:flex-row">
-        <div className="flex-1 flex flex-col justify-center 2xl:pr-20">
+        <div className="flex-1 sticky top-32 flex flex-col justify-center 2xl:pr-20">
           <div className="flex flex-col items-center">
             <h1 className="hero-text mt-8 mb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]"> {AnimatedText('Alexandra', 0.05, 0.1)} </h1>
             <h1 className="hero-text mb-16 xs:mb-16 2xl:mb-20 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">{AnimatedText('Biehle', 0.05, 0.2)}</h1>
