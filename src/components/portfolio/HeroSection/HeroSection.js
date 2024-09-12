@@ -32,8 +32,8 @@ export default function HeroSection() {
         <div className="flex-1 relative z-10 p-10 pt-5 1xl:p-24 1xl:pt-5 2xl:p-0 xl2:pl-5">
           <motion.img
             className="rounded-3xl"
-            initial={{ opacity: 0, x: 0, y: 50 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1, x: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             src={profilePic}
             alt="Alexandra Biehle"
