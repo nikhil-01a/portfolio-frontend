@@ -6,13 +6,13 @@ export default function Header() {
   const getEmailAttributes = getSocialIconsAttributes('network', 'email')
 
   return (
-    <header className="sticky top-0 flex items-start justify-between max-w-full overflow-x-hidden mx-auto p-8 z-20 xl:items-center">
-      <div className="flex flex-row items-center">
+    <header className="sticky top-0 flex justify-between p-8 z-20">
+      <div>
         <SocialIcon {...getInstagramAttributes} />
         <SocialIcon {...getLinkedInAttributes} />
       </div>
-      <div className="flex flex-row items-center cursor-pointer text-white">
-        <SocialIcon {...getEmailAttributes} />
+      <div>
+        <SocialIcon {...getEmailAttributes} className="cursor-pointer" />
       </div>
     </header>
   )
