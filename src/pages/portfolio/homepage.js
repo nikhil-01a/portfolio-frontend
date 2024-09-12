@@ -6,6 +6,7 @@ export default function Homepage() {
     <div className=" text-white ">
       <Header />
       <HeroSection />
+      <div className="h-screen"></div>
       {/* About */}
       {/* Experience */}
       {/* Projects */}
