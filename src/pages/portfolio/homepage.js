@@ -7,6 +7,7 @@ export default function Homepage() {
       <Header />
       <div className="flex flex-col items-center">
         <HeroSection />
+        <div className="h-screen"></div>
         {/* About */}
         {/* Experience */}
         {/* Projects */}
