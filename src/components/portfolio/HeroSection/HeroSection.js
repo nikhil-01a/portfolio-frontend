@@ -12,17 +12,17 @@ export default function HeroSection() {
         </div>
         <div>
           <div className="flex flex-col items-start custom-spacing">
-            <h1 className="hero-text text-base xs:text-lg lg:text-xl">{AnimatedText('- Graphic Designer', 0.03)}</h1>
-            <h1 className="hero-text mb-8 xs:mb-10 text-base xs:text-lg lg:text-xl">{AnimatedText('- Outreach Coordinator', 0.03)}</h1>
+            <h1 className="hero-text text-[0.6rem] xs:text-lg lg:text-xl">{AnimatedText('- Graphic Designer', 0.03)}</h1>
+            <h1 className="hero-text mb-8 xs:mb-10 text-[0.6rem] xs:text-lg lg:text-xl">{AnimatedText('- Outreach Coordinator', 0.03)}</h1>
           </div>
         </div>
         <div className="flex flex-col items-start">
           <div className="flex flex-row items-center justify-between w-full custom-spacing">
             <div>
-              <h1 className="hero-text text-xs text-[0.6rem] xs:text-sm">{AnimatedText('Currently Designing At', 0.03)}</h1>
-              <h1 className="hero-text text-xs text-[0.6rem] xs:text-sm">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+              <h1 className="hero-text text-xs text-[0.4rem] xs:text-sm">{AnimatedText('Currently Designing At', 0.03)}</h1>
+              <h1 className="hero-text text-xs text-[0.4rem] xs:text-sm">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
             </div>
-            <h1 className="hero-text text-xs text-[0.6rem] xs:text-sm">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
+            <h1 className="hero-text text-xs text-[0.4rem] xs:text-sm">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
           </div>
         </div>
       </div>
