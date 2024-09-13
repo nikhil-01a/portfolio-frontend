@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function HeroSection() {
   return (
     <div className="relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
-      <div className="flex-1 sticky top-32 pl-12 pr-12 pt-5">
+      <div className="flex-1 sticky top-32 pl-8 pr-8 pt-5">
         <div className="flex flex-col items-center">
           <h1 className="hero-text pt-8 pb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]"> {AnimatedText('Alexandra', 0.05, 0.1)} </h1>
           <h1 className="hero-text pb-12 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">{AnimatedText('Biehle', 0.05, 0.2)}</h1>
