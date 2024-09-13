@@ -26,7 +26,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="flex-1 z-10 pl-12 pr-12 pt-5 flex justify-center">
+      <div className="flex-1 z-10 pl-12 pr-12 pt-8 flex justify-center">
         <div className="xs:pl-12 xs:pr-12">
           <motion.img
             className="rounded-3xl "
