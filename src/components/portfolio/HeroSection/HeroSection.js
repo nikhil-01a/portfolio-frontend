@@ -24,27 +24,31 @@ export default function HeroSection() {
 
 const TopText = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 300], [1, 0])
+  const opacity = useTransform(scrollY, [0, 250], [1, 0])
 
   return (
-    <motion.div className="flex-1 sticky top-32 pl-12 pr-12" style={{ opacity }}>
+    <motion.div className="flex-1 sticky top-32 pl-12 pr-12 md:p-0" style={{ opacity }}>
       <div className="flex flex-col items-center">
-        <h1 className="hero-text xs:pt-8 pb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]"> {AnimatedText('Alexandra', 0.05, 0.1)} </h1>
-        <h1 className="hero-text pb-12 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-6xl lg:leading-[1.5rem]">{AnimatedText('Biehle', 0.05, 0.2)}</h1>
+        <h1 className="hero-text xs:pt-8 pb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] lg:leading-[0.9rem] 2xl:text-6xl 2xl:leading-[1.5rem]">
+          {AnimatedText('Alexandra', 0.05, 0.1)}
+        </h1>
+        <h1 className="hero-text pb-12 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] lg:leading-[0.9rem] 2xl:text-6xl 2xl:leading-[1.5rem]">
+          {AnimatedText('Biehle', 0.05, 0.2)}
+        </h1>
       </div>
       <div>
         <div className="flex flex-col items-start custom-spacing">
-          <h1 className="hero-text text-[0.7rem] xs:text-lg lg:text-xl">{AnimatedText('- Graphic Designer', 0.03)}</h1>
-          <h1 className="hero-text mb-8 xs:mb-10 text-[0.7rem] xs:text-lg lg:text-xl">{AnimatedText('- Outreach Coordinator', 0.03)}</h1>
+          <h1 className="hero-text text-[0.7rem] xs:text-lg 2xl:text-xl ">{AnimatedText('- Graphic Designer', 0.03)}</h1>
+          <h1 className="hero-text mb-8 2xl:mb-10 text-[0.7rem] xs:text-lg 2xl:text-xl">{AnimatedText('- Outreach Coordinator', 0.03)}</h1>
         </div>
       </div>
       <div className="flex flex-col items-start">
         <div className="flex flex-row items-center justify-between w-full custom-spacing">
           <div>
-            <h1 className="hero-text text-[0.55rem] xs:text-sm">{AnimatedText('Currently Designing At', 0.03)}</h1>
-            <h1 className="hero-text text-[0.55rem] xs:text-sm">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('Currently Designing At', 0.03)}</h1>
+            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
           </div>
-          <h1 className="hero-text text-[0.55rem] xs:text-sm">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
+          <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
         </div>
       </div>
     </motion.div>
