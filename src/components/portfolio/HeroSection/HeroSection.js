@@ -24,7 +24,7 @@ export default function HeroSection() {
 
 const TopText = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250], [1, 0])
+  const opacity = useTransform(scrollY, [0, 210], [1, 0])
 
   return (
     <motion.div className="flex-1 sticky top-32 pl-12 pr-12 md:p-0" style={{ opacity }}>
