@@ -4,12 +4,12 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroSection() {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 225, 450, 850], [0.4, 1, 1, 0])
+  const opacity = useTransform(scrollY, [0, 180, 450, 850], [0.4, 1, 1, 0])
 
   return (
-    <div className="relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
+    <div className="relative w-full flex flex-col justify-center pt-16 xs:pt-0 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
       <TopText />
-      <div className="flex-1 z-10 pl-12 pr-12 pt-16 xs:pt-8 flex justify-center">
+      <div className="flex-1 z-10 pl-12 pr-12 pt-2 flex justify-center">
         <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
           <motion.img
             className="rounded-3xl "
@@ -31,28 +31,28 @@ const TopText = () => {
   const opacity = useTransform(scrollY, [0, 200], [1, 0])
 
   return (
-    <motion.div className="flex-1 sticky top-12 pl-12 pr-12 md:p-0" style={{ opacity }}>
+    <motion.div className="flex-1 sticky top-20 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity }}>
       <div className="flex flex-col items-center">
-        <h1 className="hero-text xs:pt-8 pb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] lg:leading-[0.9rem] 2xl:text-6xl 2xl:leading-[1.5rem]">
+        <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] 1xl:text-[5rem] 1xl:leading-[2.2rem] 2xl:text-[5.5rem] 2xl:leading-[2.8rem]">
           {AnimatedText('Alexandra', 0.05, 0.1)}
         </h1>
-        <h1 className="hero-text pb-12 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] lg:leading-[0.9rem] 2xl:text-6xl 2xl:leading-[1.5rem]">
+        <h1 className="hero-text pb-12 text-[2.9rem] leading-[0.6rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] 1xl:text-[5rem] 1xl:leading-[2.2rem] 2xl:text-[5.5rem] 2xl:leading-[2.8rem]">
           {AnimatedText('Biehle', 0.05, 0.2)}
         </h1>
       </div>
       <div>
-        <div className="flex flex-col items-start custom-spacing">
-          <h1 className="hero-text text-[0.7rem] xs:text-lg 2xl:text-xl ">{AnimatedText('- Graphic Designer', 0.03)}</h1>
-          <h1 className="hero-text mb-8 2xl:mb-10 text-[0.7rem] xs:text-lg 2xl:text-xl">{AnimatedText('- Outreach Coordinator', 0.03)}</h1>
+        <div className="flex flex-col items-center custom-spacing">
+          <h1 className="hero-text text-[0.7rem] xs:text-lg 2xl:text-xl ">{AnimatedText('Graphic Designer', 0.03, 0.2)}</h1>
+          <h1 className="hero-text mb-10 2xl:mb-10 text-[0.7rem] xs:text-lg 2xl:text-xl">{AnimatedText('Outreach Coordinator', 0.03, 0.2)}</h1>
         </div>
       </div>
       <div className="flex flex-col items-start">
         <div className="flex flex-row items-center justify-between w-full custom-spacing">
           <div>
-            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('Currently Designing At', 0.03)}</h1>
-            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Currently Designing At', 0.03)}</h1>
+            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
           </div>
-          <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
+          <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pr-1 lg:pr-20 xl:pr-28 1xl:pr-36 2xl:pr-48">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
         </div>
       </div>
     </motion.div>
