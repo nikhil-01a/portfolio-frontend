@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroSection() {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 100, 450, 850], [0.4, 1, 1, 0])
+  const opacity = useTransform(scrollY, [0, 225, 450, 850], [0.4, 1, 1, 0])
 
   return (
     <div className="relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
