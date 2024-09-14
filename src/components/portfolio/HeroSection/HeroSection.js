@@ -28,10 +28,10 @@ export default function HeroSection() {
 
 const TopText = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 210], [1, 0])
+  const opacity = useTransform(scrollY, [0, 310], [1, 0])
 
   return (
-    <motion.div className="flex-1 sticky top-32 pl-12 pr-12 md:p-0" style={{ opacity }}>
+    <motion.div className="flex-1 sticky top-12 pl-12 pr-12 md:p-0" style={{ opacity }}>
       <div className="flex flex-col items-center">
         <h1 className="hero-text xs:pt-8 pb-8 text-3xl leading-[0rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] lg:leading-[0.9rem] 2xl:text-6xl 2xl:leading-[1.5rem]">
           {AnimatedText('Alexandra', 0.05, 0.1)}
