@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full flex flex-col justify-center pt-16 xs:pt-0 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
       <TopText />
-      <div className="flex-1 z-10 pl-12 pr-12 pt-2 flex justify-center">
+      <div className="flex-1 z-10 pl-12 pr-12 xs:pt-2 flex justify-center">
         <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
           <motion.img
             className="rounded-3xl "
@@ -49,10 +49,10 @@ const TopText = () => {
       <div className="flex flex-col items-start">
         <div className="flex flex-row items-center justify-between w-full custom-spacing">
           <div>
-            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Currently Designing At', 0.03)}</h1>
-            <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Currently Designing At', 0.03)}</h1>
+            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-1 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
           </div>
-          <h1 className="hero-text text-[0.55rem] xs:text-[0.75rem] 2xl:text-sm pr-1 lg:pr-20 xl:pr-28 1xl:pr-36 2xl:pr-48">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
+          <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pr-1 lg:pr-20 xl:pr-28 1xl:pr-36 2xl:pr-48">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
         </div>
       </div>
     </motion.div>
