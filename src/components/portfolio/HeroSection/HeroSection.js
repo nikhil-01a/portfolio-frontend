@@ -3,25 +3,10 @@ import './HeroSection.css'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroSection() {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250, 450, 850], [0.4, 1, 1, 0])
-
   return (
     <div className="relative w-full flex flex-col justify-center pt-16 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
       <TopText />
-      <div className="flex-1 z-10 pl-12 pr-12 xs:pt-2 flex justify-center">
-        <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
-          <motion.img
-            className="rounded-3xl "
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 0.4, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            src={profilePic}
-            alt="Alexandra Biehle"
-            style={{ willChange: 'opacity, transform', opacity }}
-          />
-        </div>
-      </div>
+      <BottomImage />
     </div>
   )
 }
@@ -29,7 +14,6 @@ export default function HeroSection() {
 const TopText = () => {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [0, 250], [1, 0])
-
   return (
     <motion.div className="flex-1 sticky top-20 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity }}>
       <div className="flex flex-col items-center">
@@ -59,7 +43,27 @@ const TopText = () => {
   )
 }
 
-export const AnimatedText = (text, speed, delay) => {
+const BottomImage = () => {
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 250, 450, 850], [0.4, 1, 1, 0])
+  return (
+    <div className="flex-1 z-10 pl-12 pr-12 xs:pt-2 flex justify-center">
+      <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
+        <motion.img
+          className="rounded-3xl "
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 0.4, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          src={profilePic}
+          alt="Alexandra Biehle"
+          style={{ willChange: 'opacity, transform', opacity }}
+        />
+      </div>
+    </div>
+  )
+}
+
+const AnimatedText = (text, speed, delay) => {
   return (
     <motion.span initial="hidden" animate="visible" transition={{ staggerChildren: speed - 0.02, delayChildren: delay }}>
       {text.split('').map((char, index) => (
