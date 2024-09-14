@@ -18,7 +18,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             src={profilePic}
             alt="Alexandra Biehle"
-            style={{ opacity }}
+            style={{ willChange: 'opacity, transform', opacity }}
           />
         </div>
       </div>
