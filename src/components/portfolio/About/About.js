@@ -19,7 +19,7 @@ export default function About() {
           <br />I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact,
           inspire, and bring joy. From childhood, I’ve been drawn to art and design - whether crafting, writing stories, or creating virtual worlds.
         </motion.p>
-        <motion.h1 className="pt-60 text-[2rem]" style={{ scale, opacity: tagLineOpacity }}>
+        <motion.h1 className="pt-60 xl:text-[1.80rem] 2xl:text-[2rem]" style={{ scale, opacity: tagLineOpacity }}>
           Let’s create something meaningful together
         </motion.h1>
       </div>
