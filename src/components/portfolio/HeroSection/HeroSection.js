@@ -46,7 +46,7 @@ const TopText = () => {
 
 const BottomImage = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250, 650, 1150], [0.4, 1, 1, 0])
+  const opacity = useTransform(scrollY, [0, 250, 550, 1150], [0.4, 1, 1, 0])
   const scale = useTransform(scrollY, [0, 250, 650, 950], [0.8, 1, 1, 0.8])
   return (
     <div className="flex-1 z-10 pl-12 pr-12 flex justify-center">
