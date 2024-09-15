@@ -13,7 +13,7 @@ export default function About() {
         <motion.h1 className="text-[3.5rem]" style={{ y, scale, opacity }}>
           ABOUT ME
         </motion.h1>
-        <motion.p className="content-text pt-2 text-xl" style={{ opacity, scale }}>
+        <motion.p className="content-text pt-3 text-xl" style={{ opacity, scale }}>
           My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.
           <br />
           <br />I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact,
