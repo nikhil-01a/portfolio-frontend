@@ -12,6 +12,13 @@
   letter-spacing: 0.04em;
 }
 
+.hero-text2 {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 1000;
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
 .content-text {
   font-family: 'Inter Tight', sans-serif;
   text-align: start;
