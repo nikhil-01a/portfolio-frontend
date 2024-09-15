@@ -11,3 +11,11 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+.content-text {
+  font-family: 'Inter Tight', sans-serif;
+  text-align: start;
+  font-weight: 900;
+  text-transform: none;
+  letter-spacing: normal;
+}
