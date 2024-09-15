@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full flex flex-col justify-center pt-16 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
+    <div className="relative w-full flex flex-col justify-center pt-32 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96">
       <TopText />
       <BottomImage />
     </div>
@@ -16,7 +16,7 @@ const TopText = () => {
   const opacity = useTransform(scrollY, [0, 80, 450], [1, 1, 0])
   const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
   return (
-    <motion.div className="flex-1 sticky top-40 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
+    <motion.div className="flex-1 sticky top-28 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
       <div className="flex flex-col items-center">
         <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] 1xl:text-[5.5rem] 1xl:leading-[2.6rem] 2xl:text-[6rem] 2xl:leading-[3rem]">
           {AnimatedText('Alexandra', 0.05, 0.1)}
