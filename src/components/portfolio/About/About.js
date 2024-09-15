@@ -2,18 +2,18 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function About() {
   const { scrollY } = useScroll()
-  const x = useTransform(scrollY, [1000, 1100], [-1000, 0])
-  const scale = useTransform(scrollY, [600, 1000, 1150], [0.5, 0.5, 1])
-  const opacity = useTransform(scrollY, [1000, 1100, 1400, 1550], [0, 1, 1, 0])
+  const y = useTransform(scrollY, [700, 1100], [-250, 0])
+  const scale = useTransform(scrollY, [1100, 1150], [0.9, 1])
+  const opacity = useTransform(scrollY, [700, 1100, 1400, 1550], [0, 1, 1, 0])
   const tagLineOpacity = useTransform(scrollY, [1550, 1650, 1750, 1950], [0, 1, 1, 0])
 
   return (
     <div>
       <div className="overflow-x-hidden flex flex-col items-center pt-80 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96 hero-text ">
-        <motion.h1 className="text-[3.5rem]" style={{ x, scale, opacity }}>
+        <motion.h1 className="text-[3.5rem]" style={{ y, scale, opacity }}>
           ABOUT ME
         </motion.h1>
-        <motion.p className="content-text pt-8 text-xl" style={{ opacity, scale }}>
+        <motion.p className="content-text pt-2 text-xl" style={{ opacity, scale }}>
           My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.
           <br />
           <br />I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact,
