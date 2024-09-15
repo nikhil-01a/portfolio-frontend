@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <div>
-      <div className="overflow-x-hidden flex flex-col items-center xl:pt-[26rem] 1xl:pt-80 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 xl:pl-80 1xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 1xl:pl-96 hero-text ">
+      <div className="overflow-x-hidden flex flex-col items-center xl:pt-[28rem] 1xl:pt-80 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 xl:pl-80 1xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 1xl:pl-96 hero-text ">
         <motion.h1 className="xl:text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
           ABOUT ME
         </motion.h1>
