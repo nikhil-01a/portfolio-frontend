@@ -13,8 +13,8 @@ export default function HeroSection() {
 
 const TopText = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250], [1, 0])
-  const scale = useTransform(scrollY, [0, 250], [1.3, 0.8])
+  const opacity = useTransform(scrollY, [0, 80, 450], [1, 1, 0])
+  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
   return (
     <motion.div className="flex-1 sticky top-40 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
       <div className="flex flex-col items-center">
