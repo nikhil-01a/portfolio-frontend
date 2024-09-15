@@ -2,8 +2,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 export default function Experience() {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [1900, 2100], [0, 1])
-  const experienceOpacity = useTransform(scrollY, [1950, 2170, 2200, 2215], [0, 0.2, 0.2, 1])
-  const experienceScale = useTransform(scrollY, [1950, 2170, 2200, 2215], [0.98, 0.98, 0.98, 1])
+  const experienceOpacity = useTransform(scrollY, [1950, 2170, 2170, 2215], [0, 0.2, 0.2, 1])
+  const experienceScale = useTransform(scrollY, [1950, 2170, 2170, 2215], [0.98, 0.98, 0.98, 1])
 
   return (
     <div className=" flex flex-col xl:pt-96 1xl:pt-80 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-48 sm:pl-20 md:pl-20 lg:pl-40 xl:pl-48 hero-text">
