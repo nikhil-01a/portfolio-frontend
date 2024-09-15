@@ -18,10 +18,10 @@ const TopText = () => {
   return (
     <motion.div className="flex-1 sticky top-28 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
       <div className="flex flex-col items-center">
-        <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] 1xl:text-[5.5rem] 1xl:leading-[2.6rem] 2xl:text-[6rem] 2xl:leading-[3rem]">
+        <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem]  lg:leading-[1rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
           {AnimatedText('Alexandra', 0.05, 0.1)}
         </h1>
-        <h1 className="hero-text pb-12 text-[2.9rem] leading-[0.6rem] xs:text-5xl xs:leading-[1rem] lg:text-[3.25rem] 1xl:text-[5.5rem] 1xl:leading-[2.6rem] 2xl:text-[6rem] 2xl:leading-[3rem]">
+        <h1 className="hero-text pb-16 text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem] lg:leading-[1rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
           {AnimatedText('Biehle', 0.05, 0.2)}
         </h1>
       </div>
@@ -46,10 +46,10 @@ const TopText = () => {
 
 const BottomImage = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250, 450, 850], [0.4, 1, 1, 0])
-  const scale = useTransform(scrollY, [0, 350, 450, 850], [0.8, 1, 1, 0.9])
+  const opacity = useTransform(scrollY, [0, 250, 750, 1150], [0.4, 1, 1, 0])
+  const scale = useTransform(scrollY, [0, 250, 750, 950], [0.8, 1, 1, 0.8])
   return (
-    <div className="flex-1 z-10 pl-12 pr-12 xs:pt-2 flex justify-center">
+    <div className="flex-1 z-10 pl-12 pr-12 flex justify-center">
       <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
         <motion.img
           className="rounded-3xl "
