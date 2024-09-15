@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 export default function About() {
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [700, 1100], [-250, 0])
-  const scale = useTransform(scrollY, [1100, 1150], [0.9, 1])
+  const scale = useTransform(scrollY, [1100, 1200], [0.9, 1])
   const opacity = useTransform(scrollY, [700, 1100, 1400, 1550], [0, 1, 1, 0])
   const tagLineOpacity = useTransform(scrollY, [1550, 1650, 1750, 1950], [0, 1, 1, 0])
 
