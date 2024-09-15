@@ -1,14 +1,17 @@
-function About({ title = 'When Nothing Passed', phone, tempFunction }) {
+import { motion, useScroll, useTransform } from 'framer-motion'
+
+export default function About() {
+  const { scrollY } = useScroll()
+  const x = useTransform(scrollY, [600, 1000], [-1000, 0])
+  const scale = useTransform(scrollY, [600, 1100, 1150], [0.7, 0.7, 1])
+  const opacity = useTransform(scrollY, [600, 900, 1200, 1250], [0.5, 1, 1, 0])
   return (
-    <div className="pt-40">
-      <h1> This is the About section</h1>
-      <button onClick={tempFunction}>Click Me</button>
-      <br />
-      {title}
-      <br />
-      {phone}
+    <div>
+      <div className="overflow-x-hidden sticky top-[2500px] flex justify-center pt-28 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-96 hero-text ">
+        <motion.h1 className="text-[3.5rem]" style={{ x, scale, opacity }}>
+          ABOUT ME
+        </motion.h1>
+      </div>
     </div>
   )
 }
-
-export default About
