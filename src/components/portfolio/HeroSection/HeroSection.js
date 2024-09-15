@@ -13,7 +13,7 @@ export default function HeroSection() {
 
 const TopText = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 80, 450], [1, 1, 0])
+  const opacity = useTransform(scrollY, [0, 80, 350], [1, 1, 0])
   const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
   return (
     <motion.div className="flex-1 sticky top-28 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
@@ -46,8 +46,8 @@ const TopText = () => {
 
 const BottomImage = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 250, 750, 1150], [0.4, 1, 1, 0])
-  const scale = useTransform(scrollY, [0, 250, 750, 950], [0.8, 1, 1, 0.8])
+  const opacity = useTransform(scrollY, [0, 250, 650, 1150], [0.4, 1, 1, 0])
+  const scale = useTransform(scrollY, [0, 250, 650, 950], [0.8, 1, 1, 0.8])
   return (
     <div className="flex-1 z-10 pl-12 pr-12 flex justify-center">
       <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-36 2xl:pr-36">
