@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full flex flex-col justify-center pt-32 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 1xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 1xl:pl-96">
+    <div className="relative w-full flex flex-col justify-center pt-32 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96">
       <TopText />
       <BottomImage />
     </div>
