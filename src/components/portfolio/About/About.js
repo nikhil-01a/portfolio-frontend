@@ -17,7 +17,7 @@ export default function About() {
           My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.
           <br />
           <br />I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact,
-          inspire, and bring joy. From childhood, I’ve been drawn to art and design - whether crafting, writing stories, or creating virtual worlds.
+          inspire, and bring joy.
         </motion.p>
         <motion.h1 className="pt-80 1xl:pt-60 text-[1.6rem] 1xl:text-[1.80rem] 2xl:text-[2rem]" style={{ scale, opacity: tagLineOpacity }}>
           Let’s create something meaningful together
