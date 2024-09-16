@@ -35,7 +35,7 @@ const TopText = () => {
         <div className="flex flex-row items-center justify-between w-full custom-spacing">
           <div>
             <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-4 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Currently Designing At', 0.03)}</h1>
-            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-4 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshal Retail Group', 0.03)}</h1>
+            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-4 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshall Retail Group', 0.03)}</h1>
           </div>
           <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pr-4 lg:pr-20 xl:pr-28 1xl:pr-36 2xl:pr-48">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
         </div>
