@@ -13,8 +13,6 @@ export default function Homepage() {
         <About />
         <Experience />
         <div className="h-screen"></div>
-        {/* About */}
-        {/* Experience */}
         {/* Projects */}
         {/* Skills */}
         {/* Contact Me*/}
