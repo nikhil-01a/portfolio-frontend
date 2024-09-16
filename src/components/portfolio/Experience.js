@@ -13,30 +13,25 @@ export default function Experience() {
       </motion.div>
       <motion.div className="flex pl-20 pt-8 flex-col justify-center hero-text2" style={{ opacity: experienceOpacity, scale: experienceScale }}>
         <div>
-          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">First Experience</h1>
-          <h1 className=" text-[1rem] hero-text">First Experience</h1>
+          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">Marshall Retail Group</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Designer</h1>
         </div>
         <div class="h-px bg-gray-500 my-4"></div>
         <div>
-          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">First Experience</h1>
-          <h1 className=" text-[1rem] hero-text">First Experience</h1>
+          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">Morgan Publishing House Inc.</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Designer & Outreach Coordinator</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Design Intern</h1>
         </div>
         <div class="h-px bg-gray-500 my-4"></div>
         <div>
-          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">First Experience</h1>
-          <h1 className=" text-[1rem] hero-text">First Experience</h1>
+          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">Build A Life Foundation</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Designer & Outreach Coordinator</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Design Intern</h1>
         </div>
         <div class="h-px bg-gray-500 my-4"></div>
-
         <div>
-          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">First Experience</h1>
-          <h1 className=" text-[1rem] hero-text">First Experience</h1>
-        </div>
-        <div class="h-px bg-gray-500 my-4"></div>
-
-        <div>
-          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">First Experience</h1>
-          <h1 className=" text-[1rem] hero-text">First Experience</h1>
+          <h1 className=" text-[1.5rem] leading-[2.3rem] 1xl:leading-[3rem]">Trampoline Design</h1>
+          <h1 className=" text-[1rem] hero-text">Graphic Design Intern</h1>
         </div>
       </motion.div>
     </div>
