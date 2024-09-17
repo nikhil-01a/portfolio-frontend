@@ -5,19 +5,23 @@ import ReactLenis from 'lenis/dist/lenis-react'
 import Experience from '../../components/portfolio/Experience/Experience'
 import HeroText from '../../components/portfolio/HeroText/HeroText'
 import TagLine from '../../components/portfolio/Tagline/TagLine'
-import { useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function Homepage() {
-  const transformOne = useElementOneTransform()
-  const transformTwo = useElementTwoTransform()
-  console.log(transformOne)
-  console.log(transformTwo)
   return (
     <div className=" text-white ">
       <ReactLenis root>
         <Header />
-        <HeroText {...transformOne} />
-        <HeroSection {...transformTwo} />
+        <motion.div
+          className="relative w-full flex flex-col justify-center pt-32 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96"
+          style={useElementOneTransform()}
+        >
+          <HeroText />
+        </motion.div>
+
+        <div className="relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96">
+          <HeroSection {...useElementTwoTransform()} />
+        </div>
         <About />
         <TagLine />
         <Experience />
