@@ -1,4 +1,4 @@
-import profilePic from '../../../assets/IMG_6768.jpg'
+import AlexLogo from '../../../assets/AlexLogo.png'
 import './HeroSection.css'
 import { motion } from 'framer-motion'
 
@@ -11,7 +11,7 @@ export default function HeroSection({ opacity, scale }) {
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 0.4, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          src={profilePic}
+          src={AlexLogo}
           alt="Alexandra Biehle"
           style={{ willChange: 'opacity, transform', opacity, scale }}
         />
