@@ -6,11 +6,18 @@ import Experience from '../../components/portfolio/Experience/Experience'
 import HeroText from '../../components/portfolio/HeroText/HeroText'
 import TagLine from '../../components/portfolio/Tagline/TagLine'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import bgVideo from '../../assets/BiehleCloudLights.mp4'
 
 export default function Homepage() {
   return (
     <div className=" text-white ">
       <ReactLenis root>
+        <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover z-0">
+          <source src={bgVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] to-[#1a1a1a] opacity-60 z-1"></div>
+
         <Header />
         <motion.div
           className="sticky top-0 pt-[10rem] sm:pr-[8rem] sm:pl-[8rem] md:pr-[13rem] md:pl-[13rem] lg:pr-[18rem] lg:pl-[18rem] xl:pr-[23rem] xl:pl-[23rem] 2xl:pr-[27rem] 2xl:pl-[27rem]"
