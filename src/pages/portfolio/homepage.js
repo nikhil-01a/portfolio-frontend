@@ -4,6 +4,7 @@ import About from '../../components/portfolio/About/About'
 import ReactLenis from 'lenis/dist/lenis-react'
 import Experience from '../../components/portfolio/Experience/Experience'
 import HeroText from '../../components/portfolio/HeroText/HeroText'
+import TagLine from '../../components/portfolio/Tagline/TagLine'
 
 export default function Homepage() {
   return (
@@ -13,6 +14,7 @@ export default function Homepage() {
         <HeroText />
         <HeroSection />
         <About />
+        <TagLine />
         <Experience />
         <div className="h-screen"></div>
         {/* Projects */}
