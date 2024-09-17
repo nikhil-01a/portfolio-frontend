@@ -1,12 +1,9 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-export default function HeroText() {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 80, 350], [1, 1, 0])
-  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
+export default function HeroText({ opacity, scale }) {
   return (
     <div className="relative w-full flex flex-col justify-center pt-32 xs:pt-16 sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96">
-      <motion.div className="flex-1 sticky top-28 xs:top-12 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
+      <motion.div className="flex-1 sticky top-28 xs:top-32 pl-12 pr-12 md:p-0" style={{ opacity, scale }}>
         <div className="flex flex-col items-center">
           <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem]  lg:leading-[1rem] xl:text-[6.2rem] xl:leading-[3rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
             {AnimatedText('Alexandra', 0.05, 0.1)}
