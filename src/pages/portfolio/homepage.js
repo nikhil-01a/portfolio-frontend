@@ -12,12 +12,11 @@ export default function Homepage() {
   return (
     <div className=" text-white ">
       <ReactLenis root>
-        <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover z-0">
+        <motion.video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover z-0" style={useVideoTransform()}>
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] to-[#1a1a1a] opacity-60 z-1"></div>
-
         <Header />
         <motion.div
           className="sticky top-0 pt-[10rem] sm:pr-[8rem] sm:pl-[8rem] md:pr-[13rem] md:pl-[13rem] lg:pr-[18rem] lg:pl-[18rem] xl:pr-[23rem] xl:pl-[23rem] 2xl:pr-[27rem] 2xl:pl-[27rem]"
@@ -50,8 +49,14 @@ const useElementOneTransform = () => {
 
 const useElementTwoTransform = () => {
   const { scrollY } = useScroll()
-  console.log(scrollY.get())
   const opacity = useTransform(scrollY, [350, 450, 600, 650], [0.4, 1, 1, 1])
   const scale = useTransform(scrollY, [350, 450, 600, 650], [0.6, 0.8, 0.8, 0.8])
+  return { opacity, scale }
+}
+
+const useVideoTransform = () => {
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 20], [1, 0])
+  const scale = useTransform(scrollY, [350, 450, 600, 650], [1, 1, 1, 1])
   return { opacity, scale }
 }
