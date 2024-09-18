@@ -1,4 +1,4 @@
-import AlexLogo from '../../../assets/AlexLogo.png'
+import AlexLogo from '../../../assets/IMG_6768.jpg'
 import './HeroSection.css'
 import { motion } from 'framer-motion'
 
