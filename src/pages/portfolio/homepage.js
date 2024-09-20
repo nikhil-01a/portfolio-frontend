@@ -32,6 +32,7 @@ export default function Homepage() {
         <TagLine />
         <Experience />
         <div className="h-screen"></div>
+        {/* TODO: Replace Logo with text*/}
         {/* Projects */}
         {/* Skills */}
         {/* Contact Me*/}
