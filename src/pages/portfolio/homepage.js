@@ -22,11 +22,11 @@ export default function Homepage() {
           className="sticky top-0 pt-[10rem] sm:pr-[8rem] sm:pl-[8rem] md:pr-[13rem] md:pl-[13rem] lg:pr-[18rem] lg:pl-[18rem] xl:pr-[23rem] xl:pl-[23rem] 2xl:pr-[27rem] 2xl:pl-[27rem]"
           style={useElementOneTransform()}
         >
-          <HeroText />
+          <HeroSection />
         </motion.div>
 
         <div className="pt-[12rem] relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96">
-          <HeroSection {...useElementTwoTransform()} />
+          <HeroText {...useElementTwoTransform()} />
         </div>
         <About />
         <TagLine />
