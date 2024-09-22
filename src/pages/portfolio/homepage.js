@@ -3,7 +3,6 @@ import HeroSection from '../../components/portfolio/HeroSection/HeroSection'
 import About from '../../components/portfolio/About/About'
 import ReactLenis from 'lenis/dist/lenis-react'
 import Experience from '../../components/portfolio/Experience/Experience'
-import HeroText from '../../components/portfolio/HeroText/HeroText'
 import TagLine from '../../components/portfolio/Tagline/TagLine'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import bgVideo from '../../assets/BiehleCloudLights.mp4'
@@ -25,9 +24,7 @@ export default function Homepage() {
           <HeroSection />
         </motion.div>
 
-        <div className="pt-[12rem] relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96">
-          <HeroText {...useElementTwoTransform()} />
-        </div>
+        <div className="pt-[12rem] relative w-full flex flex-col justify-center sm:pr-20 md:pr-40 lg:pr-60 xl:pr-80 2xl:pr-96 sm:pl-20 md:pl-40 lg:pl-60 xl:pl-80 2xl:pl-96"></div>
         <About />
         <TagLine />
         <Experience />
@@ -45,13 +42,6 @@ const useElementOneTransform = () => {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [0, 80, 350], [1, 1, 0])
   const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
-  return { opacity, scale }
-}
-
-const useElementTwoTransform = () => {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [350, 450, 600, 650], [0.4, 1, 1, 1])
-  const scale = useTransform(scrollY, [350, 450, 600, 650], [0.6, 0.8, 0.8, 0.8])
   return { opacity, scale }
 }
 
