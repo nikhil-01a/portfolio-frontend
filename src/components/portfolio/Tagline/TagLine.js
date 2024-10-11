@@ -3,8 +3,8 @@ import bgVideo from '../../../assets/BiehleCloudLights.mp4'
 
 export default function TagLine() {
   const { scrollY } = useScroll()
-  const scale = useTransform(scrollY, [1550, 1600, 1750, 2950], [1, 1, 1, 2])
-  const opacity = useTransform(scrollY, [1850, 2150, 2850], [0, 1, 0])
+  const scale = useTransform(scrollY, [1150, 1200, 1350, 2550], [1, 1, 1, 2])
+  const opacity = useTransform(scrollY, [1450, 1750, 2450], [0, 1, 0])
 
   return (
     <motion.div className="sticky top-0 overflow-hidden w-full h-screen flex justify-center items-center hero-text" style={{}}>
@@ -25,6 +25,6 @@ export default function TagLine() {
 const useVideoTransform = () => {
   const { scrollY } = useScroll()
   const scale = useTransform(scrollY, [1100, 1200], [1, 1])
-  const opacity = useTransform(scrollY, [1550, 1850, 2150, 2850], [0, 1, 1, 0])
+  const opacity = useTransform(scrollY, [1150, 1450, 1750, 2450], [0, 1, 1, 0])
   return { opacity, scale }
 }

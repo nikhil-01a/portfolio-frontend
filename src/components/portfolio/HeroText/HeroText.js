@@ -1,54 +1,92 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function HeroText() {
   return (
-    <div>
-      <div className="flex flex-col items-center">
-        <h1 className="hero-text xs:pt-8 pb-8 text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem]  lg:leading-[1rem] xl:text-[6.2rem] xl:leading-[3rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
-          {AnimatedText('Alexandra', 0.05, 0.1)}
-        </h1>
-        <h1 className="hero-text pb-16 text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem] lg:leading-[1rem] xl:text-[6.2rem] xl:leading-[3rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
-          {AnimatedText('Biehle', 0.05, 0.2)}
-        </h1>
-      </div>
+    <motion.div className="sticky top-[10rem] flex justify-center" style={useVisualDesigner()}>
+      <h1 className="hero-text text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem]  lg:leading-[1rem] xl:text-[6.2rem] xl:leading-[3rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
+        {AnimatedText()}
+      </h1>
+    </motion.div>
+  )
+}
+
+const useVisualDesigner = () => {
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 100, 400, 650], [0, 1, 1, 0])
+  const scale = useTransform(scrollY, [500, 750], [1, 0.5])
+  return { opacity, scale }
+}
+
+const AnimatedText = () => {
+  // Block to refer
+  const containerRef = useRef(null)
+
+  // Split the text into singular characters
+  const characters = 48
+
+  return (
+    <div ref={containerRef} className="flex text-5xl items-center justify-center">
       <div>
-        <div className="flex flex-col items-center custom-spacing">
-          <h1 className="hero-text text-[0.7rem] xs:text-lg 2xl:text-xl ">{AnimatedText('Graphic Designer', 0.03, 0.2)}</h1>
-          <h1 className="hero-text mb-10 2xl:mb-10 text-[0.7rem] xs:text-lg 2xl:text-xl">{AnimatedText('Outreach Coordinator', 0.03, 0.2)}</h1>
-        </div>
-      </div>
-      <div className="flex flex-col items-start">
-        <div className="flex flex-row items-center justify-between w-full custom-spacing">
-          <div>
-            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-4 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Currently Designing At', 0.03)}</h1>
-            <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pl-4 lg:pl-20 xl:pl-28 1xl:pl-36 2xl:pl-48">{AnimatedText('Marshall Retail Group', 0.03)}</h1>
-          </div>
-          <h1 className="hero-text text-[0.45rem] xs:text-[0.75rem] 2xl:text-sm pr-4 lg:pr-20 xl:pr-28 1xl:pr-36 2xl:pr-48">{AnimatedText('(2023 - PRESENT)', 0.03, 0.3)}</h1>
-        </div>
+        <motion.span style={useCharacterTransform(containerRef, 0, characters)} className="inline-block">
+          V
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 1, characters)} className="inline-block">
+          I
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 2, characters)} className="inline-block">
+          S
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 3, characters)} className="inline-block">
+          U
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 4, characters)} className="inline-block">
+          A
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 5, characters)} className="inline-block">
+          L
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 6, characters)} className="inline-block">
+          {'\u00A0'}
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 7, characters)} className="inline-block">
+          D
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 8, characters)} className="inline-block">
+          E
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 9, characters)} className="inline-block">
+          S
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 10, characters)} className="inline-block">
+          I
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 11, characters)} className="inline-block">
+          G
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 12, characters)} className="inline-block">
+          N
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 13, characters)} className="inline-block">
+          E
+        </motion.span>
+        <motion.span style={useCharacterTransform(containerRef, 14, characters)} className="inline-block">
+          R
+        </motion.span>
       </div>
     </div>
   )
 }
 
-const AnimatedText = (text, speed, delay) => {
-  return (
-    <motion.span initial="hidden" animate="visible" transition={{ staggerChildren: speed - 0.02, delayChildren: delay }}>
-      {text.split('').map((char, index) => (
-        <motion.span
-          key={index}
-          className="inline-block"
-          variants={{
-            hidden: {
-              opacity: 0,
-            },
-            visible: {
-              opacity: 1,
-            },
-          }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ))}
-    </motion.span>
-  )
+const useCharacterTransform = (containerRef, index, characters) => {
+  index = index + 28
+  const start = index / characters // Calculate when each letter should appear
+  const end = start + 1 / characters // Calculate when each letter should disappear
+  // Setup Scroll Y Progress
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end center'],
+  })
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
+  return { opacity }
 }

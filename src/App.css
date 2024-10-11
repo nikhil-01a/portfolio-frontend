@@ -21,8 +21,8 @@
 
 .content-text {
   font-family: 'Inter Tight', sans-serif;
-  text-align: start;
-  font-weight: 900;
+  text-align: justify;
+  font-weight: 600;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0.05em;
 }
