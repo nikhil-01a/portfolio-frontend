@@ -3,8 +3,8 @@ import TextLogo from '../../../assets/LogoText.png'
 
 export default function HeroTextLogo() {
   return (
-    <motion.div className="relative pt-[4rem] pl-[25rem] pr-[25rem] flex justify-center" style={useLogoTransform()}>
-      <motion.img src={TextLogo} initial={{ y: 0 }} animate={{ y: 0 }} transition={{ duration: 0.3 }} alt="Text Logo" />
+    <motion.div className="relative pt-[4rem] pl-[6rem] pr-[8rem] flex justify-center" style={useLogoTransform()}>
+      <motion.img src={TextLogo} alt="Text Logo" />
     </motion.div>
   )
 }
