@@ -6,7 +6,6 @@ import Experience from '../../components/portfolio/Experience/Experience'
 import TagLine from '../../components/portfolio/Tagline/TagLine'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import bgVideo from '../../assets/BiehleCloudLights.mp4'
-import HeroTextLogo from '../../components/portfolio/HeroTextLogo/HeroTextLogo'
 import HeroText from '../../components/portfolio/HeroText/HeroText'
 
 export default function Homepage() {
@@ -20,7 +19,6 @@ export default function Homepage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] to-[#1a1a1a] opacity-60 z-1"></div>
         <Header />
         <HeroSection />
-        <HeroTextLogo />
         <HeroText />
         <About />
         <TagLine />
