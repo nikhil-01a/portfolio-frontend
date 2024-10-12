@@ -2,9 +2,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function About() {
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [300, 870], [-250, 0])
-  const scale = useTransform(scrollY, [870, 900], [0.9, 1])
-  const opacity = useTransform(scrollY, [500, 800, 870, 1250, 1400], [0, 0.3, 1, 1, 0])
+  const y = useTransform(scrollY, [300, 850], [-250, 0])
+  const scale = useTransform(scrollY, [850, 900], [0.9, 1])
+  const opacity = useTransform(scrollY, [500, 800, 850, 1250, 1400], [0, 0.3, 1, 1, 0])
 
   return (
     <div>
@@ -28,8 +28,8 @@ export default function About() {
 
 const useContentTransform = () => {
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [300, 870], [600, 0])
-  const scale = useTransform(scrollY, [870, 900], [0.9, 1])
-  const opacity = useTransform(scrollY, [500, 800, 870, 1250, 1400], [0, 0.3, 1, 1, 0])
+  const y = useTransform(scrollY, [300, 850], [600, 0])
+  const scale = useTransform(scrollY, [850, 900], [0.9, 1])
+  const opacity = useTransform(scrollY, [500, 800, 850, 1250, 1400], [0, 0.3, 1, 1, 0])
   return { scale, opacity, y }
 }
