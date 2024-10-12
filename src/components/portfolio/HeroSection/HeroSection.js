@@ -5,13 +5,11 @@ import TextLogo from '../../../assets/LogoText.png'
 
 export default function HeroSection() {
   return (
-    <div>
-      <motion.div className="sticky top-0 pt-[6rem] flex justify-center" style={useElementOneTransform()}>
-        <div className="max-w-2xl pl-[6rem] pr-[6rem]">
-          <motion.img className="max-w-full" src={AlexLogo} alt="Alexandra Biehle" />
-        </div>
+    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-10vh' }}>
+      <motion.div className="flex justify-center" style={useElementOneTransform()}>
+        <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>
-      <motion.div className="relative pt-[4rem] pl-[6rem] pr-[8rem] flex justify-center" style={useLogoTransform()}>
+      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}>
         <motion.img src={TextLogo} alt="Text Logo" />
       </motion.div>
     </div>
