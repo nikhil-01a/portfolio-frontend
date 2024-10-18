@@ -1,11 +1,20 @@
 import AlexLogo from '../../../assets/AlexLogo.png'
 import './HeroSection.css'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { useState } from 'react'
 import TextLogo from '../../../assets/LogoText.png'
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 100 && isVisible) setIsVisible(false)
+    else if (latest <= 100 && !isVisible) setIsVisible(true)
+  })
+
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-10vh' }}>
+    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-10vh', display: isVisible ? 'flex' : 'none' }}>
       <motion.div className="flex justify-center" style={useElementOneTransform()}>
         <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>

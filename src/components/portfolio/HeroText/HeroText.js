@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroText() {
   return (
-    <motion.div className="sticky top-[38rem] flex justify-center">
+    <motion.div className="relative h-screen flex flex-col justify-center items-center">
       <motion.h1 style={useHeroTextTransform()} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
         {AnimatedText()}
       </motion.h1>
