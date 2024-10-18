@@ -1,92 +1,86 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { useState } from 'react'
 
 export default function HeroText() {
+  const [isVisible, setIsVisible] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 500 && isVisible) setIsVisible(false)
+    else if (latest <= 500 && !isVisible) setIsVisible(true)
+  })
+
   return (
-    <motion.div className="sticky top-[10rem] flex justify-center" style={useVisualDesigner()}>
-      <h1 className="hero-text text-[2.9rem] leading-[0.6rem] xs:text-[3.5rem] xs:leading-[2rem]  lg:leading-[1rem] xl:text-[6.2rem] xl:leading-[3rem] 1xl:text-[7.3rem] 1xl:leading-[4rem] 2xl:text-[8rem] 2xl:leading-[4.55rem]">
+    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ display: isVisible ? 'flex' : 'none' }}>
+      <motion.h1 style={useHeroTextTransform()} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
         {AnimatedText()}
-      </h1>
+      </motion.h1>
     </motion.div>
   )
 }
 
-const useVisualDesigner = () => {
+const useHeroTextTransform = () => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 100, 400, 650], [0, 1, 1, 0])
-  const scale = useTransform(scrollY, [500, 750], [1, 0.5])
-  return { opacity, scale }
+  const opacity = useTransform(scrollY, [100, 400, 500], [1, 1, 0])
+  return { opacity }
 }
 
 const AnimatedText = () => {
-  // Block to refer
-  const containerRef = useRef(null)
-
-  // Split the text into singular characters
-  const characters = 48
-
+  const start = 100
   return (
-    <div ref={containerRef} className="flex text-5xl items-center justify-center">
-      <div>
-        <motion.span style={useCharacterTransform(containerRef, 0, characters)} className="inline-block">
-          V
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 1, characters)} className="inline-block">
-          I
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 2, characters)} className="inline-block">
-          S
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 3, characters)} className="inline-block">
-          U
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 4, characters)} className="inline-block">
-          A
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 5, characters)} className="inline-block">
-          L
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 6, characters)} className="inline-block">
-          {'\u00A0'}
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 7, characters)} className="inline-block">
-          D
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 8, characters)} className="inline-block">
-          E
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 9, characters)} className="inline-block">
-          S
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 10, characters)} className="inline-block">
-          I
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 11, characters)} className="inline-block">
-          G
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 12, characters)} className="inline-block">
-          N
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 13, characters)} className="inline-block">
-          E
-        </motion.span>
-        <motion.span style={useCharacterTransform(containerRef, 14, characters)} className="inline-block">
-          R
-        </motion.span>
-      </div>
+    <div className="text-7xl ">
+      <motion.span style={useCharacterTransform(start)} className="inline-block">
+        V
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 20)} className="inline-block">
+        I
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 40)} className="inline-block">
+        S
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 60)} className="inline-block">
+        U
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 80)} className="inline-block">
+        A
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 100)} className="inline-block">
+        L
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 120)} className="inline-block">
+        {'\u00A0'}
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 140)} className="inline-block">
+        D
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 160)} className="inline-block">
+        E
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 180)} className="inline-block">
+        S
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 200)} className="inline-block">
+        I
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 220)} className="inline-block">
+        G
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 240)} className="inline-block">
+        N
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 260)} className="inline-block">
+        E
+      </motion.span>
+      <motion.span style={useCharacterTransform(start + 280)} className="inline-block">
+        R
+      </motion.span>
     </div>
   )
 }
 
-const useCharacterTransform = (containerRef, index, characters) => {
-  index = index + 28
-  const start = index / characters // Calculate when each letter should appear
-  const end = start + 1 / characters // Calculate when each letter should disappear
-  // Setup Scroll Y Progress
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end center'],
-  })
-  const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
+const useCharacterTransform = (start) => {
+  const end = start + 10
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [start, end], [0, 1])
   return { opacity }
 }

@@ -1,17 +1,27 @@
 import AlexLogo from '../../../assets/AlexLogo.png'
 import './HeroSection.css'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { useState } from 'react'
+import TextLogo from '../../../assets/LogoText.png'
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 100 && isVisible) setIsVisible(false)
+    else if (latest <= 100 && !isVisible) setIsVisible(true)
+  })
+
   return (
-    <motion.div
-      className="sticky top-0 pt-[4rem] sm:pr-[8rem] sm:pl-[8rem] md:pr-[13rem] md:pl-[13rem] lg:pr-[18rem] lg:pl-[18rem] xl:pr-[23rem] xl:pl-[23rem] 2xl:pr-[27rem] 2xl:pl-[27rem]"
-      style={useElementOneTransform()}
-    >
-      <div className="lg:pl-16 lg:pr-16 1xl:pl-24 1xl:pr-24 2xl:pl-[10rem] 2xl:pr-[10rem]">
-        <motion.img initial={{ y: 0 }} animate={{ y: 0 }} transition={{ duration: 0.9, type: 'spring' }} src={AlexLogo} alt="Alexandra Biehle" />
-      </div>
-    </motion.div>
+    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-10vh', display: isVisible ? 'flex' : 'none' }}>
+      <motion.div className="flex justify-center" style={useElementOneTransform()}>
+        <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
+      </motion.div>
+      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}>
+        <motion.img src={TextLogo} alt="Text Logo" />
+      </motion.div>
+    </div>
   )
 }
 
@@ -20,4 +30,13 @@ const useElementOneTransform = () => {
   const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
   const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
   return { opacity, scale }
+}
+
+const useLogoTransform = () => {
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
+  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
+  const y = useTransform(scrollY, [0, 40, 450], [0, 100, 500])
+
+  return { opacity, scale, y }
 }
