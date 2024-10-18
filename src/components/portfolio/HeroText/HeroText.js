@@ -1,8 +1,17 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { useState } from 'react'
 
 export default function HeroText() {
+  const [isVisible, setIsVisible] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 500 && isVisible) setIsVisible(false)
+    else if (latest <= 500 && !isVisible) setIsVisible(true)
+  })
+
   return (
-    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
+    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ display: isVisible ? 'flex' : 'none' }}>
       <motion.h1 style={useHeroTextTransform()} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
         {AnimatedText()}
       </motion.h1>
