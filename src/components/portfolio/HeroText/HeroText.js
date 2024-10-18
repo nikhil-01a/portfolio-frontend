@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function HeroText() {
   return (
-    <motion.div className="relative h-screen flex flex-col justify-center items-center">
+    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
       <motion.h1 style={useHeroTextTransform()} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
         {AnimatedText()}
       </motion.h1>
@@ -13,8 +13,7 @@ export default function HeroText() {
 const useHeroTextTransform = () => {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [100, 400, 500], [1, 1, 0])
-  const y = -150
-  return { opacity, y }
+  return { opacity }
 }
 
 const AnimatedText = () => {
