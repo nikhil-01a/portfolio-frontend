@@ -19,8 +19,12 @@ export default function Homepage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] to-[#1a1a1a] opacity-60 z-1"></div>
         <Header />
         <HeroSection />
-        <HeroText />
-        <About />
+        <div className="sticky top-0 h-screen">
+          <HeroText />
+        </div>
+        <div className=" h-screen">
+          <About />
+        </div>
         <TagLine />
         <Experience />
         <div className="h-screen"></div>
