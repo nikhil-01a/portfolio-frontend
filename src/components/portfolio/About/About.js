@@ -17,7 +17,11 @@ export default function About() {
   // Calculate transforms based on the screen height (responsive)
   const y = useTransform(scrollY, [screenHeight * 0.4, screenHeight * 0.6, screenHeight * 1.4, screenHeight * 1.45], [600, 0, 0, -600])
   const scale = useTransform(scrollY, [screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.3, screenHeight * 1.35], [0.9, 1, 1, 0.9])
-  const opacity = useTransform(scrollY, [screenHeight * 0.6, screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.2, screenHeight * 1.6], [0.3, 0.3, 1, 1, 0])
+  const opacity = useTransform(
+    scrollY,
+    [screenHeight * 0.6, screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.2, screenHeight * 1.3, screenHeight * 1.35, screenHeight * 1.6],
+    [0.3, 0.3, 1, 1, 1, 0.3, 0]
+  )
 
   return (
     <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
@@ -44,7 +48,10 @@ const useContentTransform = (screenHeight) => {
   // Use relative values (based on screen height) for responsive transforms
   const y = useTransform(scrollY, [screenHeight * 0.6, screenHeight * 0.85], [600, 0])
   const scale = useTransform(scrollY, [screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.3, screenHeight * 1.35], [0.9, 1, 1, 0.9])
-  const opacity = useTransform(scrollY, [screenHeight * 0.6, screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.2, screenHeight * 1.6], [0.3, 0.3, 1, 1, 0])
-
+  const opacity = useTransform(
+    scrollY,
+    [screenHeight * 0.6, screenHeight * 0.9, screenHeight * 0.95, screenHeight * 1.2, screenHeight * 1.3, screenHeight * 1.35, screenHeight * 1.6],
+    [0.3, 0.3, 1, 1, 1, 0.3, 0]
+  )
   return { scale, opacity, y }
 }
