@@ -23,8 +23,8 @@ export default function TagLine() {
     }
   }, [])
 
-  const scale = useTransform(scrollY, [scHeight * 2, scHeight * 4], [1, 2])
-  const opacity = useTransform(scrollY, [scHeight * 2.1, scHeight * 2.8, scHeight * 3.5, scHeight * 4], [0, 1, 1, 0])
+  const scale = useTransform(scrollY, [scHeight * 2, scHeight * 3.3], [1, 2])
+  const opacity = useTransform(scrollY, [scHeight * 2, scHeight * 2.8, scHeight * 3, scHeight * 3.3], [0, 0.95, 0.95, 0])
 
   return (
     <motion.div className="sticky top-0 overflow-hidden w-full h-screen flex justify-center items-center hero-text" style={{}}>
@@ -44,7 +44,7 @@ export default function TagLine() {
 
 const useTagTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [scHeight * 1.6, scHeight * 2], [400, 0])
-  const opacity = useTransform(scrollY, [scHeight * 1.8, scHeight * 2, scHeight * 3.5, scHeight * 4], [0, 1, 1, 0])
+  const y = useTransform(scrollY, [scHeight * 1.2, scHeight * 2], [250, 0])
+  const opacity = useTransform(scrollY, [scHeight * 1.5, scHeight * 2, scHeight * 3, scHeight * 3.3], [0, 1, 1, 0])
   return { opacity, y }
 }

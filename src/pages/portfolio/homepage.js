@@ -25,8 +25,9 @@ export default function Homepage() {
         <About />
         <TagLine />
         <div className="h-screen"></div>
-        <div className="h-screen"></div>
         <Experience />
+
+        <div className="h-screen"></div>
 
         <div className="h-screen"></div>
 
