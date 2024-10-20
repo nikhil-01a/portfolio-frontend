@@ -22,12 +22,16 @@ export default function Homepage() {
         <div className="sticky top-0 h-screen">
           <HeroText />
         </div>
-        <div className=" h-screen">
-          <About />
-        </div>
+        <About />
         <TagLine />
-        <Experience />
         <div className="h-screen"></div>
+        <div className="h-screen"></div>
+        <Experience />
+
+        <div className="h-screen"></div>
+
+        <div className="h-screen"></div>
+
         {/* TODO: Replace Logo with text*/}
         {/* Projects */}
         {/* Skills */}

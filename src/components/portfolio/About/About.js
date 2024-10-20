@@ -1,9 +1,10 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function About() {
   const { scrollY } = useScroll()
   const [screenHeight, setScreenHeight] = useState(0)
+  const [visible, setVisible] = useState(true)
 
   // Effect to get the current screen height
   useEffect(() => {
@@ -23,12 +24,17 @@ export default function About() {
     [0.3, 0.3, 1, 1, 1, 0.3, 0]
   )
 
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest < screenHeight * 1.6 && !visible) setVisible(true)
+    else if (latest >= screenHeight * 1.6 && visible) setVisible(false)
+  })
+
   return (
-    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
+    <motion.div className=" hero-text h-screen flex flex-col justify-center items-center" style={{ display: visible ? 'flex' : 'none' }}>
       <motion.h1 className="hero-text text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
         ABOUT ME
       </motion.h1>
-      <motion.p className="content-text pt-[1rem] text-2xl max-w-[75rem] p-12" style={useContentTransform(screenHeight)}>
+      <motion.p className="content-text pt-[1.1rem] text-2xl max-w-[75rem] p-24 pl-[10rem] pr-[10rem]" style={useContentTransform(screenHeight)}>
         <ul>
           <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
           <li className="pt-[1.5rem]">
