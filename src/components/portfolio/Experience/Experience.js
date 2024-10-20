@@ -22,11 +22,13 @@ export default function Experience() {
 
   return (
     <div className=" flex flex-col pt-[52rem]  sm:pr-20 md:pr-40 lg:pr-60 xl:pr-48 sm:pl-20 md:pl-20 lg:pl-40 xl:pl-48 hero-text">
-      <motion.div className="flex-col items-start">
-        <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]">RELEVANT</motion.h1>
-        <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]">EXPERIENCE</motion.h1>
+      <motion.div className="flex-col items-center">
+        <div className="flex justify-center">
+          <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]">RELEVANT EXPERIENCE</motion.h1>
+          <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]"></motion.h1>
+        </div>
       </motion.div>
-      <motion.div className="flex pl-20 pt-12 flex-col justify-center hero-text2" style={{ opacity: experienceOpacity, scale: experienceScale }}>
+      <motion.div className="flex pt-24 pl-32 pr-32 flex-col justify-center hero-text2" style={{ opacity: experienceOpacity, scale: experienceScale }}>
         <div>
           <h1 className=" text-[2.2rem] leading-[2.3rem]  1xl:leading-[3rem]">Marshall Retail Group</h1>
           <div className="flex pt-1 text-gray-300 justify-between">
