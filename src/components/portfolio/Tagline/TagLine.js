@@ -44,7 +44,7 @@ export default function TagLine() {
 
 const useTagTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [scHeight * 1.2, scHeight * 2], [250, 0])
+  const y = useTransform(scrollY, [scHeight * 1.2, scHeight * 2], [400, 0])
   const opacity = useTransform(scrollY, [scHeight * 1.5, scHeight * 2, scHeight * 3, scHeight * 3.3], [0, 1, 1, 0])
   return { opacity, y }
 }

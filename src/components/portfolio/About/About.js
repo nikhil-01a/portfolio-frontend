@@ -30,11 +30,11 @@ export default function About() {
   })
 
   return (
-    <motion.div className=" hero-text h-screen flex flex-col justify-center items-center" style={{ display: visible ? 'flex' : 'none' }}>
+    <motion.div className="h-screen flex flex-col justify-center items-center" style={{ display: visible ? 'flex' : 'none' }}>
       <motion.h1 className="hero-text text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
         ABOUT ME
       </motion.h1>
-      <motion.p className="content-text pt-[1.1rem] text-2xl max-w-[75rem] p-24 pl-[10rem] pr-[10rem]" style={useContentTransform(screenHeight)}>
+      <motion.p className="content-text pt-[1.1rem] text-3xl max-w-[75rem] p-10" style={useContentTransform(screenHeight)}>
         <ul>
           <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
           <li className="pt-[1.5rem]">
