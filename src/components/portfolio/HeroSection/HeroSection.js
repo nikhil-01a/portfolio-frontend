@@ -1,8 +1,7 @@
-import AlexLogo from '../../../assets/AlexLogo.png'
+import AlexLogo from '../../../assets/AlexLogo2.png'
 import './HeroSection.css'
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
-import TextLogo from '../../../assets/LogoText.png'
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(true)
@@ -14,13 +13,11 @@ export default function HeroSection() {
   })
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-10vh', display: isVisible ? 'flex' : 'none' }}>
+    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-7vh', display: isVisible ? 'flex' : 'none' }}>
       <motion.div className="flex justify-center" style={useElementOneTransform()}>
         <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>
-      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}>
-        <motion.img src={TextLogo} alt="Text Logo" />
-      </motion.div>
+      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}></motion.div>
     </div>
   )
 }

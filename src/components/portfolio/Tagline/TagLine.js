@@ -1,10 +1,30 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import bgVideo from '../../../assets/BiehleCloudLights.mp4'
 
 export default function TagLine() {
   const { scrollY } = useScroll()
-  const scale = useTransform(scrollY, [1400, 1450, 1600, 2800], [1, 1, 1, 2])
-  const opacity = useTransform(scrollY, [1700, 2000, 2700], [0, 1, 0])
+
+  const [scHeight, setScHeight] = useState(0)
+
+  useEffect(() => {
+    //Initial screen size set
+    const initialSetHeight = () => {
+      setScHeight(window.innerHeight)
+    }
+    initialSetHeight()
+
+    //Set initialSetHeight function to listen to screen resize event
+    window.addEventListener('resize', initialSetHeight)
+
+    //Clean up after the component is unmounted
+    return () => {
+      window.removeEventListener('resize', initialSetHeight)
+    }
+  }, [])
+
+  const scale = useTransform(scrollY, [scHeight * 2, scHeight * 3.3], [1, 2])
+  const opacity = useTransform(scrollY, [scHeight * 2, scHeight * 2.8, scHeight * 3, scHeight * 3.3], [0, 0.95, 0.95, 0])
 
   return (
     <motion.div className="sticky top-0 overflow-hidden w-full h-screen flex justify-center items-center hero-text" style={{}}>
@@ -15,16 +35,16 @@ export default function TagLine() {
       </motion.video>
 
       {/* Tagline Text */}
-      <motion.h1 className="relative z-10 text-[1.6rem] 1xl:text-[1.80rem] 2xl:text-[2rem]" style={useVideoTransform()}>
+      <motion.h1 className="relative z-50 text-[1.6rem] 1xl:text-[1.80rem] 2xl:text-[2rem]" style={useTagTransform(scHeight)}>
         Let’s create something meaningful together
       </motion.h1>
     </motion.div>
   )
 }
 
-const useVideoTransform = () => {
+const useTagTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const scale = useTransform(scrollY, [1350, 1450], [1, 1])
-  const opacity = useTransform(scrollY, [1400, 1700, 2000, 2700], [0, 1, 1, 0])
-  return { opacity, scale }
+  const y = useTransform(scrollY, [scHeight * 1.2, scHeight * 2], [200, 0])
+  const opacity = useTransform(scrollY, [scHeight * 1.5, scHeight * 2, scHeight * 3, scHeight * 3.3], [0, 1, 1, 0])
+  return { opacity, y }
 }
