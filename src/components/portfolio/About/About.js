@@ -30,7 +30,7 @@ export default function About() {
       <motion.h1 className="hero-text text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
         ABOUT ME
       </motion.h1>
-      <motion.p className="content-text pt-[1.1rem] text-3xl leading-[2.5rem]  max-w-[75rem] p-10 pl-[12rem] pr-[12rem]" style={useContentTransform(scHeight)}>
+      <motion.p className="content-text pt-[1.1rem] text-2xl leading-[2.5rem]  max-w-[75rem] p-10 pl-[12rem] pr-[12rem]" style={useContentTransform(scHeight)}>
         <ul>
           <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
           <li className="pt-[1.5rem]">
