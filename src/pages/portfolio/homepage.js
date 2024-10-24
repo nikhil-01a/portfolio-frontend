@@ -11,7 +11,7 @@ import HeroText from '../../components/portfolio/HeroText/HeroText'
 export default function Homepage() {
   return (
     <div className=" text-white ">
-      <ReactLenis root lerp={0.01}>
+      <ReactLenis root>
         <motion.video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover z-0" style={useVideoTransform()}>
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
