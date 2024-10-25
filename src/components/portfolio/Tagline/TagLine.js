@@ -23,7 +23,7 @@ export default function TagLine() {
     }
   }, [])
 
-  const scale = useTransform(scrollY, [scHeight * 2, scHeight * 3.3], [1, 2])
+  const scale = useTransform(scrollY, [scHeight * 1.9, scHeight * 3.3], [1, 2])
   const opacity = useTransform(scrollY, [scHeight * 2, scHeight * 2.1, scHeight * 3, scHeight * 3.3], [0, 0.95, 0.95, 0])
 
   return (
