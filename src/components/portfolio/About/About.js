@@ -17,8 +17,8 @@ export default function About() {
 
   // Calculate transforms based on the screen height (responsive)
   const y = useTransform(scrollY, [scHeight * 0.4, scHeight * 0.6, scHeight * 1.4, scHeight * 1.45], [600, 0, 0, 0])
-  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.3, scHeight * 1.35], [0.9, 1, 1, 1])
-  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.3, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0])
+  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.25], [0.9, 1, 1, 0.9])
+  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.2, scHeight * 1.25, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0.3, 0])
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     if (latest < scHeight * 1.6 && !visible) setVisible(true)
@@ -49,7 +49,7 @@ const useContentTransform = (scHeight) => {
 
   // Use relative values (based on screen height) for responsive transforms
   const y = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.85], [600, 0])
-  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.3, scHeight * 1.35], [0.9, 1, 1, 1])
-  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.3, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0])
+  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.25], [0.9, 1, 1, 0.9])
+  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.2, scHeight * 1.25, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0.3, 0])
   return { scale, opacity, y }
 }
