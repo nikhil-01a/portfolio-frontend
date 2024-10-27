@@ -21,14 +21,14 @@ export default function Experience() {
   const experienceScale = useTransform(scrollY, [scHeight * 0.1, scHeight * 0.1, scHeight * 0.1, scHeight * 0.5], [0.98, 0.98, 0.98, 1])
 
   return (
-    <div className="h-screen hero-text flex flex-col sm:pr-20 md:pr-40 lg:pr-60 xl:pr-48 sm:pl-20 md:pl-20 lg:pl-40 xl:pl-48">
+    <div className="h-screen hero-text flex flex-col pl-12 pr-12 md:pl-32 md:pr-32 lg:pl-52 lg:pr-52 xl:pl-64 xl:pr-64 1xl:pl-72 1xl:pr-72">
       <motion.div className="flex-col items-center">
         <div className="flex justify-center">
           <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]">RELEVANT EXPERIENCE</motion.h1>
           <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]"></motion.h1>
         </div>
       </motion.div>
-      <motion.div className="flex pt-24 pl-32 pr-32 flex-col justify-center hero-text2" style={{ opacity: experienceOpacity, scale: experienceScale }}>
+      <motion.div className="flex pt-24 flex-col justify-center hero-text2" style={{ opacity: experienceOpacity, scale: experienceScale }}>
         <div>
           <h1 className=" text-[2.2rem] leading-[2.3rem]  1xl:leading-[3rem]">Marshall Retail Group</h1>
           <div className="flex pt-1 text-gray-300 justify-between">
