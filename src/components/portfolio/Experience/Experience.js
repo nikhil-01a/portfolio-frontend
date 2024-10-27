@@ -17,11 +17,11 @@ export default function Experience() {
     }
   }, [])
 
-  const experienceOpacity = useTransform(scrollY, [2550, 2550, 2900, 2950], [0, 0.2, 0.2, 1])
-  const experienceScale = useTransform(scrollY, [2550, 2550, 2900, 2950], [0.98, 0.98, 0.98, 1])
+  const experienceOpacity = useTransform(scrollY, [scHeight * 0.1, scHeight * 0.5, scHeight * 0.5, scHeight * 1], [0, 0.2, 0.2, 1])
+  const experienceScale = useTransform(scrollY, [scHeight * 0.1, scHeight * 0.1, scHeight * 0.1, scHeight * 0.5], [0.98, 0.98, 0.98, 1])
 
   return (
-    <div className=" flex flex-col pt-[52rem]  sm:pr-20 md:pr-40 lg:pr-60 xl:pr-48 sm:pl-20 md:pl-20 lg:pl-40 xl:pl-48 hero-text">
+    <div className="h-screen hero-text flex flex-col sm:pr-20 md:pr-40 lg:pr-60 xl:pr-48 sm:pl-20 md:pl-20 lg:pl-40 xl:pl-48">
       <motion.div className="flex-col items-center">
         <div className="flex justify-center">
           <motion.h1 className="text-[3rem] 1xl:text-[3.5rem] leading-[2.5rem] 1xl:leading-[3rem]">RELEVANT EXPERIENCE</motion.h1>
