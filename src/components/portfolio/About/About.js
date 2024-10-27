@@ -1,4 +1,5 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
+import AlexPicture from '../../../assets/IMG_6768.jpg'
 import { useEffect, useState } from 'react'
 
 export default function About() {
@@ -30,15 +31,20 @@ export default function About() {
       <motion.h1 className="hero-text text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
         ABOUT ME
       </motion.h1>
-      <motion.p className="content-text pt-[1.1rem] text-2xl leading-[2.5rem]  max-w-[75rem] p-10 pl-[12rem] pr-[12rem]" style={useContentTransform(scHeight)}>
-        <ul>
-          <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
-          <li className="pt-[1.5rem]">
-            I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact, inspire,
-            and bring joy.
-          </li>
-        </ul>
-      </motion.p>
+      <motion.div className="flex justify-center p-8 pl-[12rem] pr-[12rem]" style={useContentTransform(scHeight)}>
+        <motion.p className="flex flex-1 items-center content-text pt-[1.1rem] text-2xl leading-[2.5rem] max-w-[40rem]">
+          <ul>
+            <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
+            <li className="pt-[1.5rem]">
+              I value attention to detail, composition, and color, always approaching each project with meticulous care. My dream is to collaborate with others on projects that make an impact,
+              inspire, and bring joy.
+            </li>
+          </ul>
+        </motion.p>
+        <div className="flex flex-1 justify-center items-center">
+          <img src={AlexPicture} alt="DisplayPic" className="flex items-center rounded-3xl h-[500px]" />
+        </div>
+      </motion.div>
     </motion.div>
   )
 }
