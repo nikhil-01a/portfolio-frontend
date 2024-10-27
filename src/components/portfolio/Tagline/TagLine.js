@@ -23,8 +23,8 @@ export default function TagLine() {
     }
   }, [])
 
-  const scale = useTransform(scrollY, [scHeight * 1.9, scHeight * 3.3], [1, 2])
-  const opacity = useTransform(scrollY, [scHeight * 2, scHeight * 2.1, scHeight * 3, scHeight * 3.3], [0, 0.95, 0.95, 0])
+  const scale = useTransform(scrollY, [scHeight * 1.5, scHeight * 3.3], [1, 2])
+  const opacity = useTransform(scrollY, [scHeight * 1.7, scHeight * 1.8, scHeight * 3, scHeight * 3.3], [0, 0.95, 0.95, 0])
 
   return (
     <motion.div className="sticky top-0 overflow-hidden w-full h-screen flex justify-center items-center hero-text" style={{}}>
@@ -35,7 +35,7 @@ export default function TagLine() {
       </motion.video>
 
       {/* Tagline Text */}
-      <motion.h1 className="relative z-50 text-[1.4rem] 1xl:text-[1.60rem] 2xl:text-[1.6rem]" style={useTagTransform(scHeight)}>
+      <motion.h1 className="relative z-50 text-[1.4rem] 1xl:text-[1.7rem] 2xl:text-[1.7rem]" style={useTagTransform(scHeight)}>
         Let’s create something meaningful together
       </motion.h1>
     </motion.div>
