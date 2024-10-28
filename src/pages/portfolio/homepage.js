@@ -22,8 +22,7 @@ export default function Homepage() {
         <HeroText />
         <About />
         <TagLine />
-        <div className="h-screen"></div>
-        <div className="h-screen"></div>
+        <div className="h-[210vh]"></div>
         <Experience />
 
         <div className="h-screen"></div>

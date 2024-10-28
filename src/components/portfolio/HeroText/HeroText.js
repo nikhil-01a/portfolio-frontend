@@ -1,9 +1,7 @@
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function HeroText() {
-  const [isVisible, setIsVisible] = useState(true)
-  const { scrollY } = useScroll()
   const [scHeight, setScHeight] = useState(0)
 
   useEffect(() => {
@@ -14,16 +12,11 @@ export default function HeroText() {
 
     window.addEventListener('resize', handleResize)
 
-    return window.removeEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    if (latest > scHeight && isVisible) setIsVisible(false)
-    else if (latest <= scHeight && !isVisible) setIsVisible(true)
-  })
-
   return (
-    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ display: isVisible ? 'flex' : 'none' }}>
+    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
       <motion.h1 style={useHeroTextTransform(scHeight)} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
         {AnimatedText(scHeight)}
       </motion.h1>
@@ -33,12 +26,12 @@ export default function HeroText() {
 
 const useHeroTextTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [scHeight * 0.01, scHeight * 0.9, scHeight], [1, 1, 0])
+  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.7], [1, 0])
   return { opacity }
 }
 
 const AnimatedText = (scHeight) => {
-  const start = scHeight * 0.2
+  const start = scHeight * 0.07
   return (
     <div className="text-7xl ">
       <motion.span style={useCharacterTransform(start, scHeight)} className="inline-block">
@@ -80,10 +73,10 @@ const AnimatedText = (scHeight) => {
       <motion.span style={useCharacterTransform(start + scHeight * 0.44, scHeight)} className="inline-block">
         N
       </motion.span>
-      <motion.span style={useCharacterTransform(start + scHeight * 0.58, scHeight)} className="inline-block">
+      <motion.span style={useCharacterTransform(start + scHeight * 0.48, scHeight)} className="inline-block">
         E
       </motion.span>
-      <motion.span style={useCharacterTransform(start + scHeight * 0.62, scHeight)} className="inline-block">
+      <motion.span style={useCharacterTransform(start + scHeight * 0.52, scHeight)} className="inline-block">
         R
       </motion.span>
     </div>
