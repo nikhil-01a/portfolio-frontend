@@ -17,22 +17,22 @@ export default function About() {
   }, [])
 
   // Calculate transforms based on the screen height (responsive)
-  const y = useTransform(scrollY, [scHeight * 0.4, scHeight * 0.6, scHeight * 1.4, scHeight * 1.45], [600, 0, 0, 0])
-  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.25], [0.9, 1, 1, 0.9])
-  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.2, scHeight * 1.25, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0.3, 0])
+  const scale = useTransform(scrollY, [scHeight * 0.95, scHeight * 1, scHeight * 1.3, scHeight * 1.35], [1, 1, 1, 1])
+  const opacity = useTransform(scrollY, [scHeight * 0.7, scHeight * 0.9, scHeight * 1.3, scHeight * 1.35, scHeight * 1.6], [0, 1, 1, 1, 0])
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
+    console.log('Current scrollY:', latest) // This will log the current scrollY value
     if (latest < scHeight * 1.6 && !visible) setVisible(true)
     else if (latest >= scHeight * 1.6 && visible) setVisible(false)
   })
 
   return (
     <motion.div className="h-screen flex flex-col justify-center items-center" style={{ display: visible ? 'flex' : 'none' }}>
-      <motion.h1 className="hero-text text-[3rem] 1xl:text-[3.5rem]" style={{ y, scale, opacity }}>
+      <motion.h1 className="hero-text text-[2rem] xl:text-[2.5rem] 1xl:text-[3.5rem]" style={{ scale, opacity }}>
         ABOUT ME
       </motion.h1>
-      <motion.div className="flex justify-center p-8 pl-[12rem] pr-[12rem]" style={useContentTransform(scHeight)}>
-        <motion.p className="flex flex-1 items-center content-text pt-[1.1rem] text-2xl leading-[2.5rem] max-w-[40rem]">
+      <motion.div className="flex justify-center p-8" style={useContentTransform(scHeight)}>
+        <motion.p className="flex flex-1 items-center content-text xl:text-md max-w-[40rem] 1xl:text-xl 1xl:max-w-[47rem] 2xl:text-2xl 2xl:max-w-[56rem]">
           <ul>
             <li> My expertise spans Packaging Design, Graphic Design, Advertising & Digital Design, and Spatial Experience Design, with a strong foundation in Adobe Creative Suite.</li>
             <li className="pt-[1.5rem]">
@@ -42,7 +42,7 @@ export default function About() {
           </ul>
         </motion.p>
         <div className="flex flex-1 justify-center items-center">
-          <img src={AlexPicture} alt="DisplayPic" className="flex items-center rounded-3xl h-[500px]" />
+          <img src={AlexPicture} alt="DisplayPic" className="flex items-center rounded-3xl h-[300px] 1xl:h-[400px] 2xl:h-[500px]" />
         </div>
       </motion.div>
     </motion.div>
@@ -54,8 +54,7 @@ const useContentTransform = (scHeight) => {
   const { scrollY } = useScroll()
 
   // Use relative values (based on screen height) for responsive transforms
-  const y = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.85], [600, 0])
-  const scale = useTransform(scrollY, [scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.25], [0.9, 1, 1, 0.9])
-  const opacity = useTransform(scrollY, [scHeight * 0.6, scHeight * 0.9, scHeight * 0.95, scHeight * 1.2, scHeight * 1.2, scHeight * 1.25, scHeight * 1.6], [0.3, 0.3, 1, 1, 1, 0.3, 0])
-  return { scale, opacity, y }
+  const scale = useTransform(scrollY, [scHeight * 0.95, scHeight * 1, scHeight * 1.3, scHeight * 1.35], [1, 1, 1, 1])
+  const opacity = useTransform(scrollY, [scHeight * 0.7, scHeight * 0.9, scHeight * 1.3, scHeight * 1.35, scHeight * 1.6], [0, 1, 1, 1, 0])
+  return { scale, opacity }
 }
