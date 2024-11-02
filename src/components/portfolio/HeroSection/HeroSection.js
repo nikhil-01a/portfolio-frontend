@@ -17,7 +17,6 @@ export default function HeroSection() {
       <motion.div className="flex justify-center" style={useElementOneTransform()}>
         <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>
-      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}></motion.div>
     </div>
   )
 }
@@ -27,13 +26,4 @@ const useElementOneTransform = () => {
   const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
   const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
   return { opacity, scale }
-}
-
-const useLogoTransform = () => {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
-  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
-  const y = useTransform(scrollY, [0, 40, 450], [0, 100, 500])
-
-  return { opacity, scale, y }
 }
