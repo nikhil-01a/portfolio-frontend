@@ -19,7 +19,7 @@ export default function HeroSection() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [1, 0])
+  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.75], [1, 0])
   const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [0, -scHeight * 0.13])
 
   return (

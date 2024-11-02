@@ -19,7 +19,7 @@ export default function About() {
   // Calculate transforms based on the screen height (responsive)
   const scale = useTransform(scrollY, [scHeight * 0.98, scHeight * 1, scHeight * 1.3, scHeight * 1.35], [0.95, 1, 1, 1])
   const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.7, scHeight * 0.9, scHeight, scHeight * 1.3, scHeight * 1.35, scHeight * 1.6], [0, 0.3, 0.6, 1, 1, 1, 0])
-  const y = useTransform(scrollY, [scHeight * 0.7, scHeight * 1], [scHeight * 0.449, 0])
+  const y = useTransform(scrollY, [scHeight * 0.7, scHeight * 1], [scHeight * 0.4, 0])
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     console.log('Current scrollY:', latest) // This will log the current scrollY value
@@ -57,7 +57,7 @@ const useContentTransform = (scHeight) => {
   // Use relative values (based on screen height) for responsive transforms
   const scale = useTransform(scrollY, [scHeight * 0.98, scHeight * 1, scHeight * 1.3, scHeight * 1.35], [0.95, 1, 1, 1])
   const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.7, scHeight * 0.99, scHeight, scHeight * 1.3, scHeight * 1.35, scHeight * 1.6], [0, 0.3, 0.6, 1, 1, 1, 0])
-  const y = useTransform(scrollY, [scHeight * 0.7, scHeight * 1], [scHeight * 0.561, 0])
+  const y = useTransform(scrollY, [scHeight * 0.7, scHeight * 1], [scHeight * 0.5, 0])
 
   return { scale, opacity, y }
 }
