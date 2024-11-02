@@ -16,24 +16,16 @@ export default function HeroText() {
   }, [])
 
   return (
-    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center">
-      <motion.h1 style={useHeroTextTransform(scHeight)} className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">
-        {AnimatedText(scHeight)}
-      </motion.h1>
+    <motion.div className=" flex flex-col justify-center items-center">
+      <motion.h1 className="hero-text text-[2.9rem] xs:text-[3.5rem] xl:text-[6.2rem] 1xl:text-[7.3rem] 2xl:text-[8rem]">{AnimatedText(scHeight)}</motion.h1>
     </motion.div>
   )
-}
-
-const useHeroTextTransform = (scHeight) => {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.7], [1, 0])
-  return { opacity }
 }
 
 const AnimatedText = (scHeight) => {
   const start = scHeight * 0.07
   return (
-    <div className="text-7xl ">
+    <div className="text-[3.8rem] ">
       <motion.span style={useCharacterTransform(start, scHeight)} className="inline-block">
         V
       </motion.span>
