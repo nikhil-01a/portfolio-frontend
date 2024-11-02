@@ -35,6 +35,6 @@ export default function HeroSection() {
 const useElementOneTransform = (scHeight) => {
   const { scrollY } = useScroll()
   const scale = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 0.7])
-  const opacity = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 0.3])
+  const opacity = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 1])
   return { scale, opacity }
 }
