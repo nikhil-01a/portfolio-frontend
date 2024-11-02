@@ -19,8 +19,8 @@ export default function HeroSection() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.85], [1, 0])
-  const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.85], [0, -600])
+  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [1, 0])
+  const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [0, -100])
 
   return (
     <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ opacity, y }}>
