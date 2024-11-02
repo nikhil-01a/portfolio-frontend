@@ -20,11 +20,11 @@ export default function HeroSection() {
   }, [])
 
   const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [1, 0])
-  const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [0, -100])
+  const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [0, -scHeight * 0.13])
 
   return (
     <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ opacity, y }}>
-      <motion.div className="flex justify-center pb-4" style={useElementOneTransform()}>
+      <motion.div className="flex justify-center pb-4" style={useElementOneTransform(scHeight)}>
         <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>
       <HeroText />
@@ -32,9 +32,9 @@ export default function HeroSection() {
   )
 }
 
-const useElementOneTransform = () => {
+const useElementOneTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const scale = useTransform(scrollY, [0, 40, 150], [1, 1, 0.7])
-  const opacity = useTransform(scrollY, [0, 40, 150], [1, 1, 0.3])
+  const scale = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 0.7])
+  const opacity = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 0.3])
   return { scale, opacity }
 }
