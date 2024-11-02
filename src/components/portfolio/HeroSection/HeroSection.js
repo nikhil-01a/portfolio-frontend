@@ -1,39 +1,40 @@
 import AlexLogo from '../../../assets/AlexLogo2.png'
+import HeroText from '../HeroText/HeroText'
 import './HeroSection.css'
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
-import { useState } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 export default function HeroSection() {
-  const [isVisible, setIsVisible] = useState(true)
   const { scrollY } = useScroll()
+  const [scHeight, setScHeight] = useState(0)
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    if (latest > 100 && isVisible) setIsVisible(false)
-    else if (latest <= 100 && !isVisible) setIsVisible(true)
-  })
+  useEffect(() => {
+    const handleResize = () => {
+      setScHeight(window.innerHeight)
+    }
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const opacity = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.75], [1, 0])
+  const y = useTransform(scrollY, [scHeight * 0.65, scHeight * 0.78], [0, -scHeight * 0.13])
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center" style={{ marginTop: '-7vh', display: isVisible ? 'flex' : 'none' }}>
-      <motion.div className="flex justify-center" style={useElementOneTransform()}>
+    <motion.div className="sticky top-0 h-screen flex flex-col justify-center items-center" style={{ opacity, y }}>
+      <motion.div className="flex justify-center pb-4" style={useElementOneTransform(scHeight)}>
         <motion.img className="max-w-md" src={AlexLogo} alt="Alexandra Biehle" />
       </motion.div>
-      <motion.div className="flex justify-center pt-[4rem] pl-[4rem] pr-[4rem]" style={useLogoTransform()}></motion.div>
-    </div>
+      <HeroText />
+    </motion.div>
   )
 }
 
-const useElementOneTransform = () => {
+const useElementOneTransform = (scHeight) => {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
-  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
-  return { opacity, scale }
-}
-
-const useLogoTransform = () => {
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 80, 100], [1, 1, 0])
-  const scale = useTransform(scrollY, [0, 40, 450], [1, 1, 0.7])
-  const y = useTransform(scrollY, [0, 40, 450], [0, 100, 500])
-
-  return { opacity, scale, y }
+  const scale = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 0.7])
+  const opacity = useTransform(scrollY, [scHeight * 0.053, scHeight * 0.2], [1, 1])
+  return { scale, opacity }
 }
