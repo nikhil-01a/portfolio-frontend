@@ -48,7 +48,6 @@ You may also see any lint errors in the console.
 - **Backend**: Node.js with Express
 - **Frontend**: React.js
 - **Database**: MongoDB
-- **File Storage**: Amazon S3 (for scalable file storage)
 - **Authentication**: Auth0 (for secure authentication)
 - **Hosting/Deployment**: Amazon AWS
 - **CI/CD**: GitHub Actions (for automated build and deployment pipelines)
