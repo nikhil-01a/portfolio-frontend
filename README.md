@@ -4,7 +4,7 @@
 
 ## Examples of Portfolios Created with This System
 
-- **[Alexandra Biehle Portfolio]**: https://alexandrabiehle.com/ Check out this portfolio created using the Portfolio Management System and hosted using AWS EC2 + Route 53. It showcases how the platform can be used to build a clean and professional online presence with a customizable design.
+1. **Alexandra Biehle Portfolio**: https://alexandrabiehle.com/ Check out this portfolio created using the Portfolio Management System and hosted using AWS EC2 + Route 53. It showcases how the platform can be used to build a clean and professional online presence with a customizable design.
 
 ## Available Scripts
 
